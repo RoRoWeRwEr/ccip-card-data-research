@@ -137,6 +137,7 @@ def inventory_sources() -> list[dict[str, Any]]:
         and "node_modules" not in p.parts
         and "outputs" not in p.parts
         and "working" not in p.parts
+        and not ("monitoring" in p.parts and any(part in {"state", "runs", "changes"} for part in p.parts))
         and p != ROOT / "docs" / "REPOSITORY_INVENTORY.md"
     )
     rows = []

@@ -22,6 +22,42 @@
       "passed": true
     },
     {
+      "check": "exists:docs/monitoring/README.md",
+      "passed": true
+    },
+    {
+      "check": "exists:monitoring/registry/banks.json",
+      "passed": true
+    },
+    {
+      "check": "exists:monitoring/state/latest.json",
+      "passed": true
+    },
+    {
+      "check": "exists:monitoring/changes/latest.json",
+      "passed": true
+    },
+    {
+      "check": "exists:monitoring/runs/latest.json",
+      "passed": true
+    },
+    {
+      "check": "exists:.github/workflows/monitor-bank-cards.yml",
+      "passed": true
+    },
+    {
+      "check": "exists:.github/workflows/validate-changed-bank.yml",
+      "passed": true
+    },
+    {
+      "check": "exists:scripts/monitor_bank_sources.py",
+      "passed": true
+    },
+    {
+      "check": "exists:scripts/render_monitoring_notice.py",
+      "passed": true
+    },
+    {
       "check": "exists:outputs/MASTER_DATA_REFERENCE.md",
       "passed": true
     },
@@ -86,7 +122,7 @@
     {
       "check": "CSV valid:sources.csv",
       "passed": true,
-      "count": 64
+      "count": 75
     },
     {
       "check": "CSV valid:conflicts.csv",
@@ -147,7 +183,7 @@
     {
       "check": "Markdown outputs decode as UTF-8",
       "passed": true,
-      "count": 12
+      "count": 13
     },
     {
       "check": "PROJECT_STATE required keys present",
@@ -160,6 +196,30 @@
         "exact_next_recommended_action:",
         "last_updated_commit:"
       ]
+    },
+    {
+      "check": "monitoring institution ids unique",
+      "passed": true,
+      "count": 19
+    },
+    {
+      "check": "Riyad Bank first active monitor",
+      "passed": true
+    },
+    {
+      "check": "Riyad monitoring source coverage",
+      "passed": true,
+      "kinds": [
+        "card_catalog",
+        "pricing_guide",
+        "rewards_page",
+        "rewards_terms",
+        "terms_and_conditions"
+      ]
+    },
+    {
+      "check": "monitoring workflows never invoke workbook writers",
+      "passed": true
     }
   ]
 }

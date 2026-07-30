@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-07-30T08:45:19Z",
+  "baseline_created": false,
+  "banks_checked": [
+    "riyad-bank"
+  ],
+  "source_count": 5,
+  "change_count": 0,
+  "material_change_count": 0,
+  "changes": []
+}

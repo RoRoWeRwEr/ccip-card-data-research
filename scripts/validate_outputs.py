@@ -15,6 +15,10 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
     "AGENTS.md", "PROJECT_STATE.md", "docs/REPOSITORY_INVENTORY.md",
     "docs/prompts/BANK_VALIDATION_TASK.md", "docs/prompts/NEW_SOURCE_INGESTION_TASK.md",
+    "docs/monitoring/README.md", "monitoring/registry/banks.json", "monitoring/state/latest.json",
+    "monitoring/changes/latest.json", "monitoring/runs/latest.json",
+    ".github/workflows/monitor-bank-cards.yml", ".github/workflows/validate-changed-bank.yml",
+    "scripts/monitor_bank_sources.py", "scripts/render_monitoring_notice.py",
     "outputs/MASTER_DATA_REFERENCE.md",
     "outputs/reports/MISSING_INFORMATION.md", "outputs/reports/CONFLICTS_AND_DECISIONS.md",
     "outputs/reports/CHANGELOG.md", "outputs/reports/WORKBOOK_AUDIT.md",
@@ -85,6 +89,15 @@ def main():
                   "open_pull_requests:", "exact_next_recommended_action:", "last_updated_commit:"]
     checks.append({"check": "PROJECT_STATE required keys present",
                    "passed": all(key in state_text for key in state_keys), "keys": state_keys})
+    registry = json.loads((ROOT / "monitoring/registry/banks.json").read_text(encoding="utf-8"))
+    institution_ids = [row["id"] for row in registry["institutions"]]
+    active = [row for row in registry["institutions"] if row["monitoring_status"] == "active"]
+    checks.append({"check": "monitoring institution ids unique", "passed": len(institution_ids) == len(set(institution_ids)), "count": len(institution_ids)})
+    checks.append({"check": "Riyad Bank first active monitor", "passed": len(active) == 1 and active[0]["id"] == "riyad-bank"})
+    source_kinds = {row["kind"] for row in active[0]["sources"]} if active else set()
+    checks.append({"check": "Riyad monitoring source coverage", "passed": {"card_catalog", "pricing_guide", "terms_and_conditions", "rewards_page", "rewards_terms"} <= source_kinds, "kinds": sorted(source_kinds)})
+    workflows = "\n".join((ROOT / rel).read_text(encoding="utf-8") for rel in [".github/workflows/monitor-bank-cards.yml", ".github/workflows/validate-changed-bank.yml"])
+    checks.append({"check": "monitoring workflows never invoke workbook writers", "passed": "consolidate.py" not in workflows and "validate_anb_phase2.py" not in workflows})
     result = {"passed": all(c["passed"] for c in checks), "checks": checks}
     (ROOT / "outputs/reports/validation_results.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))
