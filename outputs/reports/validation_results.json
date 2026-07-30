@@ -6,7 +6,19 @@
       "passed": true
     },
     {
+      "check": "exists:PROJECT_STATE.md",
+      "passed": true
+    },
+    {
       "check": "exists:docs/REPOSITORY_INVENTORY.md",
+      "passed": true
+    },
+    {
+      "check": "exists:docs/prompts/BANK_VALIDATION_TASK.md",
+      "passed": true
+    },
+    {
+      "check": "exists:docs/prompts/NEW_SOURCE_INGESTION_TASK.md",
       "passed": true
     },
     {
@@ -91,10 +103,14 @@
       "passed": true
     },
     {
-      "check": "six additive sheets present",
+      "check": "seven additive sheets present",
       "passed": true,
       "original": 11,
-      "output": 17
+      "output": 18
+    },
+    {
+      "check": "ANB Phase 2 validation sheet present",
+      "passed": true
     },
     {
       "check": "original card row count not decreased",
@@ -131,7 +147,19 @@
     {
       "check": "Markdown outputs decode as UTF-8",
       "passed": true,
-      "count": 9
+      "count": 12
+    },
+    {
+      "check": "PROJECT_STATE required keys present",
+      "passed": true,
+      "keys": [
+        "repository:",
+        "latest_origin_main_commit:",
+        "recommended_next_bank:",
+        "open_pull_requests:",
+        "exact_next_recommended_action:",
+        "last_updated_commit:"
+      ]
     }
   ]
 }

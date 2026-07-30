@@ -38,3 +38,21 @@ Created repeatable consolidation, validation, and comparison scripts. Generated 
 - Added Git-backed raw-source preservation, generated-file placement, XLSX ZIP integrity, and Markdown UTF-8 checks.
 - Added `scripts/check_reproducibility.py`; two independent rebuilds produced identical deterministic reports/exports and identical workbook semantics.
 - Normalized generated CSV line endings to LF so repository diffs are stable across environments.
+
+## Phase 2 — ANB official-source validation (2026-07-30)
+
+- Selected one bank only: Arab National Bank (ANB), based on documented priority and 24 identifiable products.
+- Reviewed 24/24 products against available official product pages, the retail tariff effective 2026-02-18, applicable card terms, and official reward materials.
+- Added one workbook sheet, `ANB Validation 2026-07-30`, containing 24 traceable validation rows and 15 fields per row.
+- Existing workbook sheets deleted: **0**; existing master rows deleted: **0**; populated master values overwritten: **0**.
+- Added 10 Phase 2 missing-evidence observations and 5 consolidated conflict/decision entries.
+- Added `scripts/validate_anb_phase2.py` to recreate the additive validation register without modifying raw sources.
+- Raw source files added, changed, moved, or deleted: **0**.
+- ANB cycle status: **partially validated; blocked from final-complete status by five grouped official-document gaps** listed in `MASTER_DATA_REFERENCE.md`.
+
+## Permanent autonomous repository operating system (2026-07-30)
+
+- Expanded `AGENTS.md` with mandatory repository/bootstrap checks, ordered state-file reading, autonomous interaction rules, and permanent short-input routing.
+- Added `PROJECT_STATE.md` with structured current phase, PR, bank, conflict, missing-source, decision, and next-action state.
+- Added reusable bank-validation and new-source-ingestion workflows under `docs/prompts/`.
+- Extended automated output validation to require the operating-system files and the core `PROJECT_STATE.md` keys.

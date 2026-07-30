@@ -28,25 +28,25 @@ Generated: 2026-07-30. `ready for final validation` is intentionally not assigne
 | Bank Aljazira | ALJAZIRA-13 | فيزا ذات الحد المنخفض (طموح) | conflict pending | original_master | Resolve identity/conflict/missing evidence |
 | Alinma Pay | ALNP-01 | بطاقة الكاش باك بلاتينيوم | source files available | original_master | Resolve identity/conflict/missing evidence |
 | Alinma Pay | ALNP-02 | بطاقة الكاش باك سيجنتشر | source files available | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-01 | Mastercard World Elite | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-02 | Visa Platinum | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-03 | بطاقات ائتمانية إضافية (غير محددة الاسم) | consolidated | original_master | Final official-source validation |
-| Arab National Bank | ANB-04 | Infinite Visa | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-05 | MasterCard World | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-06 | Signature Visa | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-07 | Platinum Mastercard | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-08 | Titanium Mastercard | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-09 | E-Shopping Card | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-10 | MasterCard world Legend | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-11 | MasterCard world Legend Exclusive | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-12 | MasterCard world Elite (PDF) | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-13 | Visa infinite Privilege | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-14 | Cashback Digital card | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-15 | Platinum Card | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-16 | Low Limit Card | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-17 | AlFursan Infinite | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-18 | AlFursan Signature | conflict pending | original_master | Resolve identity/conflict/missing evidence |
-| Arab National Bank | ANB-19 | Currencies Card | conflict pending | original_master | Resolve identity/conflict/missing evidence |
+| Arab National Bank | ANB-01 | Mastercard World Elite | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse and official fee/reward conflicts |
+| Arab National Bank | ANB-02 | Visa Platinum | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse; obtain Exclusive-specific pricing |
+| Arab National Bank | ANB-03 | بطاقات ائتمانية إضافية (غير محددة الاسم) | missing evidence | original_master + ANB Phase 2 | Obtain World Elite Select product disclosure |
+| Arab National Bank | ANB-04 | Infinite Visa | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse and 2%/2.75% fee conflict |
+| Arab National Bank | ANB-05 | MasterCard World | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse and 2%/2.75% fee conflict |
+| Arab National Bank | ANB-06 | Signature Visa | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse and 2%/2.75% fee conflict |
+| Arab National Bank | ANB-07 | Platinum Mastercard | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse and 2%/2.75% fee conflict |
+| Arab National Bank | ANB-08 | Titanium Mastercard | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse and 2%/2.75% fee conflict |
+| Arab National Bank | ANB-09 | E-Shopping Card | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse and 2%/2.75% fee conflict |
+| Arab National Bank | ANB-10 | MasterCard world Legend | missing evidence | original_master + ANB Phase 2 | Resolve ID reuse; obtain current Visa Classic status |
+| Arab National Bank | ANB-11 | MasterCard world Legend Exclusive | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse; current AlFursan Infinite evidence available |
+| Arab National Bank | ANB-12 | MasterCard world Elite (PDF) | missing evidence | original_master + ANB Phase 2 | Resolve ID reuse; obtain Signature-specific disclosure |
+| Arab National Bank | ANB-13 | Visa infinite Privilege | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse; current Digital Cashback evidence available |
+| Arab National Bank | ANB-14 | Cashback Digital card | missing evidence | original_master + ANB Phase 2 | Resolve ID reuse; obtain Platinum Low-Limit product evidence |
+| Arab National Bank | ANB-15 | Platinum Card | missing evidence | original_master + ANB Phase 2 | Resolve ID reuse; reward applicability is unpublished |
+| Arab National Bank | ANB-16 | Low Limit Card | conflict pending | original_master + ANB Phase 2 | Resolve ID reuse and currencies-card promotional fee conflict |
+| Arab National Bank | ANB-17 | AlFursan Infinite | missing evidence | original_master + ANB Phase 2 | Resolve ID reuse; confirm currencies-card network/rewards |
+| Arab National Bank | ANB-18 | AlFursan Signature | missing evidence | original_master + ANB Phase 2 | Resolve ID reuse; obtain mada tier pricing/specification |
+| Arab National Bank | ANB-19 | Currencies Card | missing evidence | original_master + ANB Phase 2 | Resolve ID reuse; obtain mada tier pricing/specification |
 | Bank Albilad | BALAD-01 | البطاقة الائتمانية الفضية | source files available | original_master | Resolve identity/conflict/missing evidence |
 | Bank Albilad | BALAD-02 | البطاقة الائتمانية البلاتينية | source files available | original_master | Resolve identity/conflict/missing evidence |
 | Bank Albilad | BALAD-03 | بطاقة سيغنتشر الائتمانية | source files available | original_master | Resolve identity/conflict/missing evidence |
@@ -244,11 +244,11 @@ Generated: 2026-07-30. `ready for final validation` is intentionally not assigne
 | Riyad Bank | RYB-23 | Mada World Private Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
 | Riyad Bank | RYB-24 | Mada SME Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
 | Riyad Bank | RYB-25 | Mada Salary Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
-| ANB Bank | ANB-20 | anb Mada Gold Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
-| ANB Bank | ANB-21 | anb Mada Classic Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
-| ANB Bank | ANB-22 | anb Corporate Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
-| ANB Bank | ANB-23 | anb Business Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
-| ANB Bank | ANB-24 | anb Purchase Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
+| ANB Bank | ANB-20 | anb Mada Gold Card | missing evidence | chrome_v4_unmatched + ANB Phase 2 | Obtain mada tier pricing/specification |
+| ANB Bank | ANB-21 | anb Mada Classic Card | missing evidence | chrome_v4_unmatched + ANB Phase 2 | Obtain mada tier pricing/specification |
+| ANB Bank | ANB-22 | anb Corporate Card | missing evidence | chrome_v4_unmatched + ANB Phase 2 | Obtain corporate pricing/rewards schedule |
+| ANB Bank | ANB-23 | anb Business Card | missing evidence | chrome_v4_unmatched + ANB Phase 2 | Obtain business pricing/rewards schedule |
+| ANB Bank | ANB-24 | anb Purchase Card | missing evidence | chrome_v4_unmatched + ANB Phase 2 | Obtain purchase-card pricing/rewards schedule |
 | البنك: **The Saudi Investment Bank (SAIB) — البنك السعودي للاستثمار**. | SAIB-09 | “EasyPay” Household Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
 | البنك: **The Saudi Investment Bank (SAIB) — البنك السعودي للاستثمار**. | SAIB-10 | “EasyPay” Payroll Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
 | البنك: **The Saudi Investment Bank (SAIB) — البنك السعودي للاستثمار**. | SAIB-11 | Mada Silver Debit Card | collected but not consolidated | chrome_v4_unmatched | Resolve identity/conflict/missing evidence |
