@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "exists:AGENTS.md",
+      "passed": true
+    },
+    {
+      "check": "exists:docs/REPOSITORY_INVENTORY.md",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/MASTER_DATA_REFERENCE.md",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/reports/MISSING_INFORMATION.md",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/reports/CONFLICTS_AND_DECISIONS.md",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/reports/CHANGELOG.md",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/reports/WORKBOOK_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/reports/COLLECTION_STATUS.md",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/reports/FINAL_VALIDATION_PLAN.md",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/cards.csv",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/cards.json",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/sources.csv",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/conflicts.csv",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/missing_fields.csv",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/excel/saudi-credit-cards-unified-consolidated.xlsx",
+      "passed": true
+    },
+    {
+      "check": "cards.json valid nonempty array",
+      "passed": true,
+      "count": 294
+    },
+    {
+      "check": "CSV valid:cards.csv",
+      "passed": true,
+      "count": 294
+    },
+    {
+      "check": "CSV valid:sources.csv",
+      "passed": true,
+      "count": 64
+    },
+    {
+      "check": "CSV valid:conflicts.csv",
+      "passed": true,
+      "count": 146
+    },
+    {
+      "check": "CSV valid:missing_fields.csv",
+      "passed": true,
+      "count": 74
+    },
+    {
+      "check": "all original sheet names retained",
+      "passed": true
+    },
+    {
+      "check": "six additive sheets present",
+      "passed": true,
+      "original": 11,
+      "output": 17
+    },
+    {
+      "check": "original card row count not decreased",
+      "passed": true,
+      "original": 197,
+      "output": 197
+    },
+    {
+      "check": "original formula count preserved",
+      "passed": true,
+      "original": 0,
+      "output_original_sheets": 0
+    },
+    {
+      "check": "source files unchanged since inventory",
+      "passed": true,
+      "count": 55
+    }
+  ]
+}
