@@ -127,7 +127,18 @@ def extract_document(path: Path) -> dict[str, Any]:
 
 
 def inventory_sources() -> list[dict[str, Any]]:
-    files = sorted(p for p in ROOT.rglob("*") if p.is_file() and ".git" not in p.parts and "outputs" not in p.parts and "working" not in p.parts)
+    # Exclude generated outputs, working files, and this generated inventory itself.
+    # Including the inventory in its own hash registry makes every rerun unstable.
+    files = sorted(
+        p for p in ROOT.rglob("*")
+        if p.is_file()
+        and ".git" not in p.parts
+        and "__pycache__" not in p.parts
+        and "node_modules" not in p.parts
+        and "outputs" not in p.parts
+        and "working" not in p.parts
+        and p != ROOT / "docs" / "REPOSITORY_INVENTORY.md"
+    )
     rows = []
     for p in files:
         digest = sha256(p)
@@ -344,7 +355,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str] | No
     if not fieldnames:
         fieldnames = list(rows[0].keys()) if rows else []
     with path.open("w", encoding="utf-8-sig", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
 
@@ -469,7 +480,7 @@ Generated: {TODAY}. Source hashes are recorded in `working/source_hashes.json`.
 
 - Source files under `Credit Cards Terms and Conditions/`: {sum(ext_counts.values())}
 - Types: {', '.join(f'`{k}` {v}' for k,v in sorted(ext_counts.items()))}
-- Exact duplicate hash groups: {len(duplicate_groups)}
+- Duplicate groups (exact bytes or normalized extracted text): {len(duplicate_groups)}
 - Unreadable, encrypted, or unsupported files: {len(unreadable)}
 - The RTF source is readable via conservative control-code stripping; layout fidelity is not claimed.
 
@@ -484,6 +495,8 @@ Generated: {TODAY}. Source hashes are recorded in `working/source_hashes.json`.
 ## Limitations
 
 PDF text extraction was performed page-by-page. A readable PDF with little or no extractable text may require OCR or visual table review during final validation. DOCX paragraphs and tables were extracted structurally. No source file was modified.
+
+Generated deliverables are maintained under `outputs/`, `docs/`, `scripts/`, and `working/` as defined in `AGENTS.md`; they are intentionally excluded from the raw-source hash table to avoid recursive inventories.
 """
     (ROOT / "docs" / "REPOSITORY_INVENTORY.md").write_text(inv_text, encoding="utf-8")
 
@@ -663,6 +676,14 @@ All original sheets, rows, cell values, formatting, formulas, comments, hyperlin
 ## Scripts and outputs
 
 Created repeatable consolidation, validation, and comparison scripts. Generated the consolidated workbook, five machine-readable exports, repository inventory, master reference, audit, missing-data, conflict, collection-status, changelog, and final-validation plan.
+
+## Pre-merge release review
+
+- Added the permanent repository separation, source-ingestion, and GitHub lifecycle policy to `AGENTS.md`.
+- Removed the generated repository inventory from its own hash scope and excluded ignored runtime caches, eliminating recursive/non-source inventory drift.
+- Added Git-backed raw-source preservation, generated-file placement, XLSX ZIP integrity, and Markdown UTF-8 checks.
+- Added `scripts/check_reproducibility.py`; two independent rebuilds produced identical deterministic reports/exports and identical workbook semantics.
+- Normalized generated CSV line endings to LF so repository diffs are stable across environments.
 """
     (REPORTS / "CHANGELOG.md").write_text(changelog, encoding="utf-8")
 

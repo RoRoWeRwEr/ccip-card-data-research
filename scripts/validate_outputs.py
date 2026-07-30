@@ -6,6 +6,8 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import subprocess
+import zipfile
 from pathlib import Path
 from openpyxl import load_workbook
 
@@ -57,6 +59,24 @@ def main():
             p = ROOT / row["path"]
             source_checks.append(p.exists() and digest(p) == row["sha256"])
     checks.append({"check": "source files unchanged since inventory", "passed": all(source_checks), "count": len(source_checks)})
+    raw_diff = subprocess.run(
+        ["git", "status", "--porcelain", "--", "Credit Cards Terms and Conditions"],
+        cwd=ROOT, capture_output=True, text=True, check=True,
+    ).stdout.strip()
+    checks.append({"check": "raw source folder has no Git changes", "passed": raw_diff == "", "details": raw_diff})
+    raw_names = {p.name for p in (ROOT / "Credit Cards Terms and Conditions").iterdir() if p.is_file()}
+    generated_names = {"saudi-credit-cards-unified-consolidated.xlsx", "MASTER_DATA_REFERENCE.md", "MISSING_INFORMATION.md",
+                       "CONFLICTS_AND_DECISIONS.md", "CHANGELOG.md", "WORKBOOK_AUDIT.md", "COLLECTION_STATUS.md",
+                       "FINAL_VALIDATION_PLAN.md", "cards.csv", "cards.json", "sources.csv", "conflicts.csv", "missing_fields.csv"}
+    checks.append({"check": "generated deliverables are outside raw source folder", "passed": not bool(raw_names & generated_names),
+                   "unexpected": sorted(raw_names & generated_names)})
+    workbook_path = ROOT / "outputs/excel/saudi-credit-cards-unified-consolidated.xlsx"
+    with zipfile.ZipFile(workbook_path) as archive:
+        bad_member = archive.testzip()
+    checks.append({"check": "consolidated XLSX ZIP integrity", "passed": bad_member is None, "bad_member": bad_member})
+    markdown_paths = [ROOT / rel for rel in REQUIRED if rel.endswith(".md")]
+    checks.append({"check": "Markdown outputs decode as UTF-8", "passed": all(p.read_text(encoding="utf-8") is not None for p in markdown_paths),
+                   "count": len(markdown_paths)})
     result = {"passed": all(c["passed"] for c in checks), "checks": checks}
     (ROOT / "outputs/reports/validation_results.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))

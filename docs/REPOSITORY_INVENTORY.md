@@ -6,7 +6,7 @@ Generated: 2026-07-30. Source hashes are recorded in `working/source_hashes.json
 
 - Source files under `Credit Cards Terms and Conditions/`: 55
 - Types: `.docx` 5, `.md` 4, `.pdf` 44, `.rtf` 1, `.xlsx` 1
-- Exact duplicate hash groups: 1
+- Duplicate groups (exact bytes or normalized extracted text): 1
 - Unreadable, encrypted, or unsupported files: 0
 - The RTF source is readable via conservative control-code stripping; layout fidelity is not claimed.
 
@@ -14,8 +14,8 @@ Generated: 2026-07-30. Source hashes are recorded in `working/source_hashes.json
 
 | source_id | path | extension | size_bytes | sha256 | text_sha256 | suspected_duplicate | duplicate_basis | bank_mapping | status | pages | encrypted | text_chars |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SRC-001 | .gitignore | [none] | 92 | 0522f2798429fc5b6cb2b229db2a10e8bc13b19530aa8879661222157419375f |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
-| SRC-002 | AGENTS.md | .md | 5939 | 6e6e1f7b726483a279da7bbf319212cc15925bc3c02575d52c8f00473c2d1abc |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
+| SRC-001 | .gitignore | [none] | 111 | 26b21e06079461ad047aa196d5084e1f1c0ac5da3348a6eed40e0fc9d5a28cd1 |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
+| SRC-002 | AGENTS.md | .md | 8205 | 24a82218a8d03b6318a27b342ab801344a8fe339a39de0a7dd8797c4579b7240 |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
 | SRC-003 | Credit Cards Terms and Conditions/01. saudi-credit-cards-unified V3.xlsx | .xlsx | 135252 | 643ad6a2857b6c871bc6524e6b9f0cff0440ffe677811845db0207c92b429e37 | 2214d152aa42fd1e9cc6cbba2676f3d4238b484da5fb829d5faeae129e3fbea1 | False |  | Unmapped / multi-bank | readable |  | False | 243532 |
 | SRC-004 | Credit Cards Terms and Conditions/02. Xlsx audit master reference 2026 07 29.md | .md | 12516 | 7f3581e1bdd53d839258bc738a3dd56b07fe52037cdedbbab637a7a3ebada324 | 1e19cbcfdbd09cd0e71327555216f087e3b2922a25f545dd084106c85f5ad554 | False |  | Unmapped / multi-bank | readable |  | False | 8216 |
 | SRC-005 | Credit Cards Terms and Conditions/03. Cards information from Claude Chrome prompt V4.md | .md | 202472 | 3ac265484433b3f13eab5533ada93007aa4c4a109083b422443898f2478be889 | 1413fb6f4e73d0e35d7cc1409833f707fbcd8beba0a0e7056bb17680419a3b08 | False |  | Unmapped / multi-bank | readable |  | False | 144596 |
@@ -71,13 +71,13 @@ Generated: 2026-07-30. Source hashes are recorded in `working/source_hashes.json
 | SRC-055 | Credit Cards Terms and Conditions/SNB prepaid-cards-t-c-en.pdf | .pdf | 17892453 | e3674acca8370d46d58d6ddf6cab38d45f5b028c158e47997c81016f5e18052b | fa21ab8d3b3a600b617f1389fb20140ff567a5d35a12e009fa35758699a99d17 | False |  | Saudi National Bank | readable | 12 | False | 55962 |
 | SRC-056 | Credit Cards Terms and Conditions/enbd_ksa_credit_cards_terms_and_conditions_en.pdf | .pdf | 534293 | 33184ec9e4e543419315ba09360749b0501f67d5f5d8d706be506e58eb14863c | 137158a823eee49dea4776620bd363f6c7bed47f0579bd04784686e4a3639239 | False |  | Emirates NBD KSA | readable | 10 | False | 98529 |
 | SRC-057 | Credit Cards Terms and Conditions/index-update-manifest-2026-07-28.md | .md | 108981 | 044dd585fb1ca653e1b52101ee4d462a397949c784c21e52fe653c9e111b2e6b | 67031ea02946dd16193e5c4909ad6e21f976f2356f1b0b2f60ca459ba0c2dde4 | False |  | Unmapped / multi-bank | readable |  | False | 69620 |
-| SRC-058 | docs/REPOSITORY_INVENTORY.md | .md | 19654 | 76e11266ef8b55feeffb5415d88320132496549d8dddc349f47cb4167bb98382 |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
-| SRC-059 | readme.md | .md | 325 | 19f721d5d8eb0b8178cb6a699e7fe74877404a2841d44e265cc29d18d5b82669 | a0920ca048c005d2317e02e726b186df4a8b4f729cd3247bc57df11d57c1e5ee | False |  | Unmapped / multi-bank | readable |  | False | 325 |
-| SRC-060 | scripts/README.md | .md | 539 | d86c326f91d160b7acf62dfb4f83df85564eb68e992a4533f59dbf5d4edf15c0 | 41bf50260363a8871ffea3cdd62c9765459311910759e5e2c6e68bb867dcf4c9 | False |  | Unmapped / multi-bank | readable |  | False | 539 |
+| SRC-058 | readme.md | .md | 535 | bdbf49f860805cd653f4a2b4913fc33458ba7549811e75b7a3fe55279112ca14 | 82a75aed70e52a528cd409dc7c827c389da4db42288eaff22c5ec435c797f183 | False |  | Unmapped / multi-bank | readable |  | False | 535 |
+| SRC-059 | scripts/README.md | .md | 580 | 287b1aa25ae034c50db154f10539c91acc363d47bfeeec38827a4d1987f77bf9 | c174caa645683f3ad9273c019b78bfa87022f6caa0e63d74627bacb3ee54b888 | False |  | Unmapped / multi-bank | readable |  | False | 580 |
+| SRC-060 | scripts/check_reproducibility.py | .py | 2603 | b166b125d2d157b13938af438d3101473bfc8fdc488cabb746f322d87f6fa120 |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
 | SRC-061 | scripts/compare_workbooks.py | .py | 2426 | e0409809b25f050b36a4f3ff9c261a3ecf2ca77cf3bd7a59c5ac3ecf080789c2 |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
-| SRC-062 | scripts/consolidate.py | .py | 39301 | 532f4e36157e87b423428d3be1da9b69836d688c87c64d99b317d830249aab32 |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
+| SRC-062 | scripts/consolidate.py | .py | 40585 | 89b60322e605d866da3feceb09f5718f0ff6d9dcce788ed600021e1666e6cc09 |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
 | SRC-063 | scripts/render_workbook.mjs | .mjs | 2141 | 8b3611e1cd9ea23ce9966ce0feafed63ff1974b54b86a932d5e3096ec038c89d |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
-| SRC-064 | scripts/validate_outputs.py | .py | 4034 | 878b1238c24cc577c6354b6d059e3f5755a7691becb04f1ba8c0ba6cf50ebbe0 |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
+| SRC-064 | scripts/validate_outputs.py | .py | 5633 | 9635584983166b54c75ff615c5f68e8a71b09f742b962e3068dda302ff5054c8 |  | False |  | Unmapped / multi-bank | repository file |  | False |  |
 
 ## Duplicate groups (exact bytes or normalized extracted text)
 
@@ -91,3 +91,5 @@ Generated: 2026-07-30. Source hashes are recorded in `working/source_hashes.json
 ## Limitations
 
 PDF text extraction was performed page-by-page. A readable PDF with little or no extractable text may require OCR or visual table review during final validation. DOCX paragraphs and tables were extracted structurally. No source file was modified.
+
+Generated deliverables are maintained under `outputs/`, `docs/`, `scripts/`, and `working/` as defined in `AGENTS.md`; they are intentionally excluded from the raw-source hash table to avoid recursive inventories.

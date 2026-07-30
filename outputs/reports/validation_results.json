@@ -112,6 +112,26 @@
       "check": "source files unchanged since inventory",
       "passed": true,
       "count": 55
+    },
+    {
+      "check": "raw source folder has no Git changes",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "generated deliverables are outside raw source folder",
+      "passed": true,
+      "unexpected": []
+    },
+    {
+      "check": "consolidated XLSX ZIP integrity",
+      "passed": true,
+      "bad_member": null
+    },
+    {
+      "check": "Markdown outputs decode as UTF-8",
+      "passed": true,
+      "count": 9
     }
   ]
 }

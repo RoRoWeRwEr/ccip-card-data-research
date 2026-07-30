@@ -6,6 +6,8 @@ This repository consolidates research about Saudi Arabian credit, charge, prepai
 
 The current objective is a traceable working dataset. It is not proof that every product is current or finally validated.
 
+This repository is permanently separate from all CCIP application repositories, platform migrations, production databases, and application code. Its sole purpose is collecting, consolidating, auditing, validating, and maintaining Saudi bank credit-card and payment-card information.
+
 ## Protected source material
 
 Treat every file in `Credit Cards Terms and Conditions/` as an immutable source. In particular:
@@ -77,6 +79,31 @@ Record source file or URL, source type, source date when available, extraction d
 7. Add new evidence rather than replacing old evidence. Update the consolidated master reference and changelog with counts.
 8. For final validation, check every identifiable card against current official product pages, current tariffs, T&Cs, and rewards terms. Only then promote provisional decisions to final confirmed decisions.
 
+## Future source-ingestion policy
+
+Whenever a bank PDF, pricing guide, terms document, product guide, website-research file, or card record is added or changed:
+
+1. Compare the raw-source file list and hashes with the previous committed inventory.
+2. Identify the applicable bank, card/product, document type, and document/effective date where available.
+3. Extract usable information without modifying the source.
+4. Compare evidence with the consolidated workbook and machine-readable records.
+5. Classify the change as a new card, missing-data addition, correction candidate, discontinued/historical status, or conflict.
+6. Apply safe additive changes with provenance. Do not silently replace populated values.
+7. Update the repository inventory, master reference, conflicts, missing fields, collection status, provenance, changelog, and safe machine exports.
+8. Validate and publish through the GitHub lifecycle below.
+
+## GitHub lifecycle
+
+- Start work from the latest clean `main` on a task branch.
+- Keep one pull request for the branch and update it with every subsequent commit.
+- Commit all completed scripts, reports, workbook outputs, and machine exports; push them so completed work is never local-only.
+- Keep the pull-request description and validation evidence current.
+- Run all available checks and fix failures.
+- When a cohesive phase is complete, validated, and no material user decision remains, mark the PR ready and squash-merge it into `main`.
+- After merging, verify that `main` contains the generated files and expected commit, then delete the completed branch when safe.
+- Begin later source-ingestion work from the latest clean `main`.
+- Never merge a material replacement, uncertain identity merge, deletion, or major workbook redesign without the user decision required by this manual.
+
 ## Expected outputs
 
 - `outputs/excel/saudi-credit-cards-unified-consolidated.xlsx`
@@ -84,6 +111,8 @@ Record source file or URL, source type, source date when available, extraction d
 - reports under `outputs/reports/`
 - machine-readable CSV/JSON exports under `outputs/machine-readable/`
 - repository inventory at `docs/REPOSITORY_INVENTORY.md`
+
+Generated Excel, Markdown, reports, scripts, and machine-readable files belong in these output/documentation paths, never in `Credit Cards Terms and Conditions/`.
 
 ## When to consult the user
 
