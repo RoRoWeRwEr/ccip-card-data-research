@@ -79,9 +79,9 @@ jobs:
           fi
           pr_number=$(gh pr list --state open --head monitoring/automated-updates --json number --jq '.[0].number // empty')
           if [ -n "$pr_number" ]; then
-            gh pr edit "$pr_number" --body-file monitoring/runs/notice.md
+            gh pr edit "$pr_number" --body-file monitoring/runs/notice.md || echo "::warning::Could not update monitoring Draft PR; tracking Issue remains authoritative."
           else
-            gh pr create --draft --base main --head monitoring/automated-updates --title "Review detected official bank-card source changes" --body-file monitoring/runs/notice.md
+            gh pr create --draft --base main --head monitoring/automated-updates --title "Review detected official bank-card source changes" --body-file monitoring/runs/notice.md || echo "::warning::Repository settings prevent Actions from creating Draft PRs; tracking Issue was created successfully."
           fi
           bank=$(python3 -c 'import json; print(json.load(open("monitoring/changes/latest.json"))["changes"][0]["bank_id"])')
           report="monitoring/changes/latest.json"
