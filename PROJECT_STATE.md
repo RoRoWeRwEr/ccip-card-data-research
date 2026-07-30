@@ -19,7 +19,10 @@ monitoring:
   active_sources: 5
   last_baseline_result: "All five official sources accessible; no authoritative Excel changes."
   validation_trigger: "Only a detected material source change dispatches full bank validation."
-open_pull_requests: []
+open_pull_requests:
+  - number: 4
+    branch: codex/continuous-bank-monitoring
+    status: draft
 pending_user_decisions:
   - "Approval required before any irreversible ANB-01 to ANB-19 identifier remap or record merge."
   - "Selection required only if one international-fee value must be forced before ANB resolves 2% tariff versus 2.75% product-page evidence."
@@ -35,7 +38,7 @@ outstanding_conflicts:
   - "ANB inherited identifiers ANB-01 to ANB-19 map to different historical and Chrome V4 product names."
 exact_next_recommended_action: "Let the scheduled Riyad Bank monitor run; when it detects a material change, complete the dispatched full validation before any evidence-driven workbook update. Then onboard Al Rajhi Bank as the next monitored bank."
 last_updated_date: 2026-07-30
-last_updated_commit: pending-monitoring-system-commit
+last_updated_commit: 7784217a2d8782ffb2d219b0042f0bfd44bcc029
 ---
 
 # Project State
