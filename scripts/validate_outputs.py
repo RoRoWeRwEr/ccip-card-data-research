@@ -44,8 +44,9 @@ def main():
     original = load_workbook(ROOT / "Credit Cards Terms and Conditions/01. saudi-credit-cards-unified V3.xlsx", data_only=False)
     output = load_workbook(ROOT / "outputs/excel/saudi-credit-cards-unified-consolidated.xlsx", data_only=False)
     checks.append({"check": "all original sheet names retained", "passed": set(original.sheetnames) <= set(output.sheetnames)})
-    checks.append({"check": "six additive sheets present", "passed": len(output.sheetnames) == len(original.sheetnames) + 6,
+    checks.append({"check": "seven additive sheets present", "passed": len(output.sheetnames) == len(original.sheetnames) + 7,
                    "original": len(original.sheetnames), "output": len(output.sheetnames)})
+    checks.append({"check": "ANB Phase 2 validation sheet present", "passed": "ANB Validation 2026-07-30" in output.sheetnames})
     checks.append({"check": "original card row count not decreased", "passed": output["دليل البطاقات"].max_row >= original["دليل البطاقات"].max_row,
                    "original": original["دليل البطاقات"].max_row, "output": output["دليل البطاقات"].max_row})
     old_formulas = sum(c.data_type == "f" for ws in original.worksheets for row in ws.iter_rows() for c in row)

@@ -91,10 +91,14 @@
       "passed": true
     },
     {
-      "check": "six additive sheets present",
+      "check": "seven additive sheets present",
       "passed": true,
       "original": 11,
-      "output": 17
+      "output": 18
+    },
+    {
+      "check": "ANB Phase 2 validation sheet present",
+      "passed": true
     },
     {
       "check": "original card row count not decreased",
