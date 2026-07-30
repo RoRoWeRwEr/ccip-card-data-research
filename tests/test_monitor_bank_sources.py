@@ -1,4 +1,5 @@
 import importlib.util
+import http.client
 import json
 import tempfile
 import unittest
@@ -11,6 +12,9 @@ SPEC.loader.exec_module(monitor)
 
 
 class MonitorTests(unittest.TestCase):
+    def test_incomplete_read_is_retryable(self):
+        self.assertTrue(issubclass(http.client.IncompleteRead, http.client.HTTPException))
+
     def test_html_normalization_ignores_scripts_and_whitespace(self):
         first = monitor.normalize_html(b"<html><script>x=1</script><body>A   card</body></html>")
         second = monitor.normalize_html(b"<body>A card</body>")

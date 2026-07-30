@@ -7,6 +7,7 @@ import argparse
 import difflib
 import hashlib
 import html
+import http.client
 import json
 import re
 import ssl
@@ -67,7 +68,7 @@ def fetch(source: dict[str, Any], timeout: int, retries: int) -> dict[str, Any]:
                 return result
         except urllib.error.HTTPError as exc:
             result.update({"status_code": exc.code, "final_url": exc.geturl(), "error": f"HTTPError: {exc.code} {exc.reason}"})
-        except (urllib.error.URLError, TimeoutError, ssl.SSLError, ConnectionError, OSError) as exc:
+        except (urllib.error.URLError, TimeoutError, ssl.SSLError, ConnectionError, OSError, http.client.IncompleteRead) as exc:
             result["error"] = f"{type(exc).__name__}: {exc}"
         if attempt < retries:
             time.sleep(2 ** attempt)
