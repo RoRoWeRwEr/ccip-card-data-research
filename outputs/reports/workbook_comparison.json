@@ -1,0 +1,126 @@
+{
+  "original_sheets": [
+    "دليل الرموز",
+    "دليل البطاقات",
+    "معدلات الاكتساب (عام)",
+    "اكتساب تفصيلي (دقيق)",
+    "الرسوم والAPR (دقيق)",
+    "مراحل البونص (دقيق)",
+    "المزايا (دقيق)",
+    "سجل التعارضات",
+    "لوحة التغطية",
+    "المنهجية",
+    "بنوك متبقية ومستبعدة"
+  ],
+  "output_sheets": [
+    "دليل الرموز",
+    "دليل البطاقات",
+    "معدلات الاكتساب (عام)",
+    "اكتساب تفصيلي (دقيق)",
+    "الرسوم والAPR (دقيق)",
+    "مراحل البونص (دقيق)",
+    "المزايا (دقيق)",
+    "سجل التعارضات",
+    "لوحة التغطية",
+    "المنهجية",
+    "بنوك متبقية ومستبعدة",
+    "Chrome V4 - دليل",
+    "Chrome V4 - تفاصيل",
+    "مطابقة وتوحيد",
+    "مصادر ومراجع",
+    "حقول مفقودة",
+    "قرارات وتعارضات"
+  ],
+  "original_sheet_deletions": 0,
+  "all_original_sheets_preserved": true,
+  "sheets": [
+    {
+      "sheet": "دليل الرموز",
+      "preserved_semantically": true,
+      "original_rows": 8,
+      "output_rows": 8,
+      "original_columns": 2,
+      "output_columns": 2
+    },
+    {
+      "sheet": "دليل البطاقات",
+      "preserved_semantically": true,
+      "original_rows": 197,
+      "output_rows": 197,
+      "original_columns": 20,
+      "output_columns": 20
+    },
+    {
+      "sheet": "معدلات الاكتساب (عام)",
+      "preserved_semantically": true,
+      "original_rows": 148,
+      "output_rows": 148,
+      "original_columns": 9,
+      "output_columns": 9
+    },
+    {
+      "sheet": "اكتساب تفصيلي (دقيق)",
+      "preserved_semantically": true,
+      "original_rows": 168,
+      "output_rows": 168,
+      "original_columns": 6,
+      "output_columns": 6
+    },
+    {
+      "sheet": "الرسوم والAPR (دقيق)",
+      "preserved_semantically": true,
+      "original_rows": 69,
+      "output_rows": 69,
+      "original_columns": 11,
+      "output_columns": 11
+    },
+    {
+      "sheet": "مراحل البونص (دقيق)",
+      "preserved_semantically": true,
+      "original_rows": 27,
+      "output_rows": 27,
+      "original_columns": 5,
+      "output_columns": 5
+    },
+    {
+      "sheet": "المزايا (دقيق)",
+      "preserved_semantically": true,
+      "original_rows": 45,
+      "output_rows": 45,
+      "original_columns": 5,
+      "output_columns": 5
+    },
+    {
+      "sheet": "سجل التعارضات",
+      "preserved_semantically": true,
+      "original_rows": 49,
+      "output_rows": 49,
+      "original_columns": 6,
+      "output_columns": 6
+    },
+    {
+      "sheet": "لوحة التغطية",
+      "preserved_semantically": true,
+      "original_rows": 27,
+      "output_rows": 27,
+      "original_columns": 7,
+      "output_columns": 7
+    },
+    {
+      "sheet": "المنهجية",
+      "preserved_semantically": true,
+      "original_rows": 40,
+      "output_rows": 40,
+      "original_columns": 2,
+      "output_columns": 2
+    },
+    {
+      "sheet": "بنوك متبقية ومستبعدة",
+      "preserved_semantically": true,
+      "original_rows": 30,
+      "output_rows": 30,
+      "original_columns": 3,
+      "output_columns": 3
+    }
+  ]
+}
