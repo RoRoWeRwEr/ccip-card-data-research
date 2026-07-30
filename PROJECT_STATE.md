@@ -2,7 +2,7 @@
 schema_version: 1
 repository: RoRoWeRwEr/ccip-card-data-research
 purpose: Saudi payment-card research, consolidation, audit, and validation only
-latest_origin_main_commit: 6a8458e62d5dd415db7cbeec8be761c0dc212607
+latest_origin_main_commit: 877b5aa90275ebaa95a9f250808dfe83014dbd40
 latest_completed_phase: "Continuous bank-card monitoring system with Riyad Bank baseline"
 completed_banks:
   - name: Arab National Bank
@@ -19,10 +19,7 @@ monitoring:
   active_sources: 5
   last_baseline_result: "All five official sources accessible; no authoritative Excel changes."
   validation_trigger: "Only a detected material source change dispatches full bank validation."
-open_pull_requests:
-  - number: 4
-    branch: codex/continuous-bank-monitoring
-    status: draft
+open_pull_requests: []
 pending_user_decisions:
   - "Approval required before any irreversible ANB-01 to ANB-19 identifier remap or record merge."
   - "Selection required only if one international-fee value must be forced before ANB resolves 2% tariff versus 2.75% product-page evidence."
@@ -38,7 +35,7 @@ outstanding_conflicts:
   - "ANB inherited identifiers ANB-01 to ANB-19 map to different historical and Chrome V4 product names."
 exact_next_recommended_action: "Let the scheduled Riyad Bank monitor run; when it detects a material change, complete the dispatched full validation before any evidence-driven workbook update. Then onboard Al Rajhi Bank as the next monitored bank."
 last_updated_date: 2026-07-30
-last_updated_commit: 7784217a2d8782ffb2d219b0042f0bfd44bcc029
+last_updated_commit: 877b5aa90275ebaa95a9f250808dfe83014dbd40
 ---
 
 # Project State
@@ -47,7 +44,7 @@ This repository is isolated from all CCIP application, migration, and database r
 
 ANB evidence gaps and official conflicts are preserved rather than resolved by inference. They do not block merging the additive audit register, but they prevent a claim of final complete ANB validation. Riyad Bank is the next recommended bank.
 
-The monitoring baseline covers Riyad Bank's official card catalog, fee disclosure, card terms, rewards page, and rewards terms. Monitoring records hashes, metadata, accessibility, and content comparisons in machine-readable files. It never modifies the authoritative or consolidated Excel automatically. A material change opens or updates a tracking Issue and Draft PR, then dispatches the full bank-validation workflow.
+PR #4 squash-merged the monitoring system to `main` as `877b5aa90275ebaa95a9f250808dfe83014dbd40`. The monitoring baseline covers Riyad Bank's official card catalog, fee disclosure, card terms, rewards page, and rewards terms. Monitoring records hashes, metadata, accessibility, and content comparisons in machine-readable files. It never modifies the authoritative or consolidated Excel automatically. A material change opens or updates a tracking Issue and Draft PR, then dispatches the full bank-validation workflow.
 
 ## Authoritative outputs
 
