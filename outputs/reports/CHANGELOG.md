@@ -56,3 +56,4 @@ Created repeatable consolidation, validation, and comparison scripts. Generated 
 - Added `PROJECT_STATE.md` with structured current phase, PR, bank, conflict, missing-source, decision, and next-action state.
 - Added reusable bank-validation and new-source-ingestion workflows under `docs/prompts/`.
 - Extended automated output validation to require the operating-system files and the core `PROJECT_STATE.md` keys.
+- PR #2 squash-merged to `main` as `36dbefebb2cb4208062ad7c73f1df3630b043be9`; post-merge state finalized with Riyad Bank as the next action.
