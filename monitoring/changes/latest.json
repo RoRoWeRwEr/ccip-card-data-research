@@ -1,12 +1,50 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-07-30T08:45:19Z",
+  "checked_at": "2026-07-30T09:03:20Z",
   "baseline_created": false,
   "banks_checked": [
     "riyad-bank"
   ],
   "source_count": 5,
-  "change_count": 0,
-  "material_change_count": 0,
-  "changes": []
+  "change_count": 1,
+  "material_change_count": 1,
+  "changes": [
+    {
+      "event_id": "5495783874dc0b32fbfd",
+      "detected_at": "2026-07-30T08:58:03Z",
+      "bank_id": "riyad-bank",
+      "bank_name": "Riyad Bank",
+      "source_id": "riyad-card-fees",
+      "source_kind": "pricing_guide",
+      "source_label": "Credit Cards Fees",
+      "change_types": [
+        "inaccessible"
+      ],
+      "material": true,
+      "similarity_ratio": null,
+      "before": {
+        "requested_url": "https://www.riyadbank.com/documents/20121/5505375/Fees_%26_Charges.pdf/44245563-bac7-a305-ff69-02bca017592d?t=1725264291563",
+        "final_url": "https://www.riyadbank.com/documents/20121/5505375/Fees_%26_Charges.pdf/44245563-bac7-a305-ff69-02bca017592d?t=1725264291563",
+        "status_code": 200,
+        "accessible": true,
+        "etag": "\"1750858883:dtagent10327251022105625KTsz:dtagent10327251022105625KTsz\"",
+        "last_modified": "Wed, 25 Jun 2025 13:41:21 GMT",
+        "content_length": 97767,
+        "raw_sha256": "7a43f9e5565dbc650ed129e0eef8b54dffcc81babb2df621ef42135e715aea3a",
+        "content_sha256": "7a43f9e5565dbc650ed129e0eef8b54dffcc81babb2df621ef42135e715aea3a"
+      },
+      "after": {
+        "requested_url": "https://www.riyadbank.com/documents/20121/5505375/Fees_%26_Charges.pdf/44245563-bac7-a305-ff69-02bca017592d?t=1725264291563",
+        "final_url": "https://www.riyadbank.com/documents/20121/5505375/Fees_%26_Charges.pdf/44245563-bac7-a305-ff69-02bca017592d?t=1725264291563",
+        "status_code": null,
+        "accessible": false,
+        "etag": "",
+        "last_modified": "",
+        "content_length": 0,
+        "raw_sha256": "",
+        "content_sha256": "",
+        "error": "RemoteDisconnected: Remote end closed connection without response"
+      }
+    }
+  ]
 }
