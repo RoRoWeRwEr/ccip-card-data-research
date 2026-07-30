@@ -30,7 +30,7 @@ outstanding_conflicts:
   - "ANB inherited identifiers ANB-01 to ANB-19 map to different historical and Chrome V4 product names."
 exact_next_recommended_action: "Merge PR #2 after checks, then validate Riyad Bank from latest clean main using docs/prompts/BANK_VALIDATION_TASK.md."
 last_updated_date: 2026-07-30
-last_updated_commit: f073db98a39532b264522db84c601df850819459
+last_updated_commit: de01f94
 ---
 
 # Project State
