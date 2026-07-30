@@ -49,3 +49,10 @@ Created repeatable consolidation, validation, and comparison scripts. Generated 
 - Added `scripts/validate_anb_phase2.py` to recreate the additive validation register without modifying raw sources.
 - Raw source files added, changed, moved, or deleted: **0**.
 - ANB cycle status: **partially validated; blocked from final-complete status by five grouped official-document gaps** listed in `MASTER_DATA_REFERENCE.md`.
+
+## Permanent autonomous repository operating system (2026-07-30)
+
+- Expanded `AGENTS.md` with mandatory repository/bootstrap checks, ordered state-file reading, autonomous interaction rules, and permanent short-input routing.
+- Added `PROJECT_STATE.md` with structured current phase, PR, bank, conflict, missing-source, decision, and next-action state.
+- Added reusable bank-validation and new-source-ingestion workflows under `docs/prompts/`.
+- Extended automated output validation to require the operating-system files and the core `PROJECT_STATE.md` keys.

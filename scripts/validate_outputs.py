@@ -13,7 +13,9 @@ from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
-    "AGENTS.md", "docs/REPOSITORY_INVENTORY.md", "outputs/MASTER_DATA_REFERENCE.md",
+    "AGENTS.md", "PROJECT_STATE.md", "docs/REPOSITORY_INVENTORY.md",
+    "docs/prompts/BANK_VALIDATION_TASK.md", "docs/prompts/NEW_SOURCE_INGESTION_TASK.md",
+    "outputs/MASTER_DATA_REFERENCE.md",
     "outputs/reports/MISSING_INFORMATION.md", "outputs/reports/CONFLICTS_AND_DECISIONS.md",
     "outputs/reports/CHANGELOG.md", "outputs/reports/WORKBOOK_AUDIT.md",
     "outputs/reports/COLLECTION_STATUS.md", "outputs/reports/FINAL_VALIDATION_PLAN.md",
@@ -78,6 +80,11 @@ def main():
     markdown_paths = [ROOT / rel for rel in REQUIRED if rel.endswith(".md")]
     checks.append({"check": "Markdown outputs decode as UTF-8", "passed": all(p.read_text(encoding="utf-8") is not None for p in markdown_paths),
                    "count": len(markdown_paths)})
+    state_text = (ROOT / "PROJECT_STATE.md").read_text(encoding="utf-8")
+    state_keys = ["repository:", "latest_origin_main_commit:", "recommended_next_bank:",
+                  "open_pull_requests:", "exact_next_recommended_action:", "last_updated_commit:"]
+    checks.append({"check": "PROJECT_STATE required keys present",
+                   "passed": all(key in state_text for key in state_keys), "keys": state_keys})
     result = {"passed": all(c["passed"] for c in checks), "checks": checks}
     (ROOT / "outputs/reports/validation_results.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))

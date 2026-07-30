@@ -1,5 +1,27 @@
 # Saudi Payment Cards Research - Operating Manual
 
+## Mandatory task bootstrap
+
+This file is binding repository policy for Codex, ChatGPT, Claude, and every other agent. Every task must begin with read-only verification of all of the following before any edit:
+
+1. Repository identity is exactly `RoRoWeRwEr/ccip-card-data-research`.
+2. `origin/main` has been fetched and the task starts from the latest `origin/main` unless it is explicitly continuing the repository's active pull-request branch.
+3. The working tree is clean. If it is dirty, classify and preserve every pre-existing change before proceeding.
+4. `PROJECT_STATE.md` is current and consistent with Git and GitHub.
+5. The authoritative Excel and Markdown outputs listed in this manual exist and open/read successfully.
+
+Every future task must read these files completely, in this order:
+
+1. `AGENTS.md`
+2. `PROJECT_STATE.md`
+3. `outputs/MASTER_DATA_REFERENCE.md`
+4. `outputs/reports/COLLECTION_STATUS.md`
+5. `outputs/reports/CHANGELOG.md`
+6. `outputs/reports/CONFLICTS_AND_DECISIONS.md`
+7. `outputs/reports/MISSING_INFORMATION.md`
+
+Continue from the recorded state. Never restart this project or its research from zero.
+
 ## Purpose and scope
 
 This repository consolidates research about Saudi Arabian credit, charge, prepaid, low-limit, multi-currency, payroll, and mada/debit cards. It is a research and data-governance repository only. Do not integrate its data into the main CCIP platform, `index.html`, `CARD_DB`, or another production database from this repository.
@@ -70,8 +92,8 @@ Record source file or URL, source type, source date when available, extraction d
 
 ## Workflow for future agents
 
-1. Read this file and `outputs/MASTER_DATA_REFERENCE.md` before processing.
-2. Confirm the repository, branch, and clean/dirty state. Preserve unrelated user changes.
+1. Complete the mandatory task bootstrap and ordered reading sequence above.
+2. Confirm the repository, branch, latest `origin/main`, and clean/dirty state. Preserve unrelated user changes.
 3. Hash and inventory sources before processing.
 4. Run `scripts/consolidate.py` to rebuild reports, exports, and the consolidated workbook from immutable sources.
 5. Run `scripts/validate_outputs.py` and `scripts/compare_workbooks.py`.
@@ -103,6 +125,18 @@ Whenever a bank PDF, pricing guide, terms document, product guide, website-resea
 - After merging, verify that `main` contains the generated files and expected commit, then delete the completed branch when safe.
 - Begin later source-ingestion work from the latest clean `main`.
 - Never merge a material replacement, uncertain identity merge, deletion, or major workbook redesign without the user decision required by this manual.
+- Update `PROJECT_STATE.md` at the end of every task and immediately before every merge.
+
+## Permanent autonomous interaction rules
+
+- Never ask the user to copy outputs between Codex, ChatGPT, Claude, GitHub, or local folders.
+- Never tell the user to create a branch, commit, push, pull request, or merge manually when repository access is available.
+- Never stop after recommendations while safe executable work remains.
+- Ask the user only when a real decision, required missing document, inaccessible official website, authentication failure, or irreversible change blocks progress.
+- When a task finishes, always state: completed work; remaining gaps; decisions needed; exact next recommended action; whether to continue in the same task or open a new task; the exact short prompt for the next task; repository; branch; pull request; latest commit; and main merge status.
+- A bank-validation task may be started with only `Bank: <bank name>` and `Official website: <URL>`. Apply `docs/prompts/BANK_VALIDATION_TASK.md` automatically.
+- A general continuation may be started with only `Continue from PROJECT_STATE.md and execute the next recommended action.`
+- New source ingestion may be started with only `Process all new repository source files according to AGENTS.md.` Apply `docs/prompts/NEW_SOURCE_INGESTION_TASK.md` automatically.
 
 ## Expected outputs
 
