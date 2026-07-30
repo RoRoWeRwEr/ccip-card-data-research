@@ -1,0 +1,24 @@
+name: Full bank validation request
+
+on:
+  repository_dispatch:
+    types: [bank-source-change]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  request-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enforce change-only trigger and record validation request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BANK: ${{ github.event.client_payload.bank }}
+          REPORT: ${{ github.event.client_payload.change_report }}
+        run: |
+          test -n "$BANK"
+          test -n "$REPORT"
+          gh issue comment "$(gh issue list --state open --search 'in:title "Bank-card monitoring detected material changes"' --json number --jq '.[0].number')" --body "Full bank validation triggered for \`$BANK\`. Apply \`docs/prompts/BANK_VALIDATION_TASK.md\` to \`$REPORT\`; monitoring alone must not modify the authoritative Excel."

@@ -1,0 +1,88 @@
+name: Monitor official bank-card sources
+
+on:
+  schedule:
+    - cron: "17 3 * * 1,4"
+  workflow_dispatch:
+    inputs:
+      bank:
+        description: Active bank registry id (blank checks all active banks)
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: bank-card-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Continue existing automated monitoring branch
+        shell: bash
+        run: |
+          if git ls-remote --exit-code --heads origin monitoring/automated-updates >/dev/null 2>&1; then
+            git fetch origin monitoring/automated-updates
+            git switch -C monitoring/automated-updates origin/monitoring/automated-updates
+            git rebase origin/main
+          fi
+      - name: Check official sources
+        env:
+          BANK: ${{ inputs.bank }}
+        shell: bash
+        run: |
+          if [ -n "$BANK" ]; then
+            python3 scripts/monitor_bank_sources.py --bank "$BANK"
+          else
+            python3 scripts/monitor_bank_sources.py
+          fi
+      - name: Read result
+        id: result
+        run: |
+          echo "material=$(python3 -c 'import json; print(json.load(open("monitoring/changes/latest.json"))["material_change_count"])')" >> "$GITHUB_OUTPUT"
+      - name: Save run artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bank-source-monitor-${{ github.run_id }}
+          path: |
+            monitoring/runs/latest.json
+            monitoring/changes/latest.json
+      - name: Publish material change evidence
+        if: steps.result.outputs.material != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 scripts/render_monitoring_notice.py
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git switch -C monitoring/automated-updates
+          git add monitoring/state/latest.json monitoring/changes/latest.json monitoring/changes/events.jsonl monitoring/runs/latest.json
+          git commit -m "Record detected official bank-card source changes" || true
+          git push --force-with-lease --set-upstream origin monitoring/automated-updates
+          gh label create monitoring --description "Automated official-source monitoring" --color 1D76DB --force
+          gh label create validation-required --description "Full bank validation is required" --color D93F0B --force
+          issue_number=$(gh issue list --state open --search 'in:title "Bank-card monitoring detected material changes"' --json number --jq '.[0].number // empty')
+          if [ -n "$issue_number" ]; then
+            gh issue edit "$issue_number" --body-file monitoring/runs/notice.md --add-label monitoring,validation-required
+          else
+            gh issue create --title "Bank-card monitoring detected material changes" --body-file monitoring/runs/notice.md --label monitoring --label validation-required
+          fi
+          pr_number=$(gh pr list --state open --head monitoring/automated-updates --json number --jq '.[0].number // empty')
+          if [ -n "$pr_number" ]; then
+            gh pr edit "$pr_number" --body-file monitoring/runs/notice.md
+          else
+            gh pr create --draft --base main --head monitoring/automated-updates --title "Review detected official bank-card source changes" --body-file monitoring/runs/notice.md
+          fi
+          bank=$(python3 -c 'import json; print(json.load(open("monitoring/changes/latest.json"))["changes"][0]["bank_id"])')
+          report="monitoring/changes/latest.json"
+          gh api "repos/${GITHUB_REPOSITORY}/dispatches" -f event_type=bank-source-change -f "client_payload[bank]=$bank" -f "client_payload[change_report]=$report"

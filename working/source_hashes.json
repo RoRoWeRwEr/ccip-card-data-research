@@ -1,6 +1,42 @@
 [
   {
     "source_id": "SRC-001",
+    "path": ".github/workflows/monitor-bank-cards.yml",
+    "filename": "monitor-bank-cards.yml",
+    "extension": ".yml",
+    "size_bytes": 3981,
+    "sha256": "8f90eb122445a8543e5ab509f90aeaae739e1c6445680c837a762963625420bc",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-002",
+    "path": ".github/workflows/validate-changed-bank.yml",
+    "filename": "validate-changed-bank.yml",
+    "extension": ".yml",
+    "size_bytes": 897,
+    "sha256": "afa18ae0679d340c1d5e953a02754e05bebe657e629f2d82200a0325305fec35",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-003",
     "path": ".gitignore",
     "filename": ".gitignore",
     "extension": "[none]",
@@ -18,12 +54,12 @@
     "sample": ""
   },
   {
-    "source_id": "SRC-002",
+    "source_id": "SRC-004",
     "path": "AGENTS.md",
     "filename": "AGENTS.md",
     "extension": ".md",
-    "size_bytes": 8205,
-    "sha256": "24a82218a8d03b6318a27b342ab801344a8fe339a39de0a7dd8797c4579b7240",
+    "size_bytes": 10705,
+    "sha256": "563d3f78278ede86898042c8c53dd1e646afb506c4709750536ae3ae869e8b9d",
     "suspected_duplicate": false,
     "duplicate_basis": "",
     "bank_mapping": "Unmapped / multi-bank",
@@ -36,7 +72,7 @@
     "sample": ""
   },
   {
-    "source_id": "SRC-003",
+    "source_id": "SRC-005",
     "path": "Credit Cards Terms and Conditions/01. saudi-credit-cards-unified V3.xlsx",
     "filename": "01. saudi-credit-cards-unified V3.xlsx",
     "extension": ".xlsx",
@@ -54,7 +90,7 @@
     "sample": "دليل الرموز الرمز | المعنى precise / دقيق | بيانات مدقَّقة بالكامل من مصدر أولي مباشر (PDF شروط وأحكام رسمي أو DOM حي) — تغطي كل الفئات، الرسوم، APR، البونص، المزايا estimated / تقديري | معدل عام محلي/دولي فقط مُستخرَج من صفحة المنتج — تقريب، بلا تفصيل فئوي كامل unavailable / غير متاح | لا رقم موثوق متاح — تظهر بالتصفح فقط، مُستبعدة من نتائج الحاسبة ⚠ تعارض | رقمان أو أكثر من مصادر رسمية مختلفة يتعارضان ولم يُحسم أيهما ساري — كلاهما مذكور، لا يُختار أحدهما بصمت [غير مؤكد] | مصدر واحد فقط، أو است"
   },
   {
-    "source_id": "SRC-004",
+    "source_id": "SRC-006",
     "path": "Credit Cards Terms and Conditions/02. Xlsx audit master reference 2026 07 29.md",
     "filename": "02. Xlsx audit master reference 2026 07 29.md",
     "extension": ".md",
@@ -72,7 +108,7 @@
     "sample": "# تدقيق ملف بطاقات الائتمان الموحَّد (Excel) — الملف المرجعي الرئيسي **آخر تحديث:** 2026-07-29 · **الغرض:** أي جلسة Claude تعمل على تدقيق/تحديث ملف `saudi-credit-cards-unified V3.xlsx` تقرأ **هذا الملف أولاً** فقط، بدل فتح كل ملفات PDF/docx المصدر أو كل مستندات المشروع الأخرى من جديد. المستندات الأخرى (تدقيقات بنك ببنك) تبقى أرشيفًا للتفاصيل الحرفية عند الحاجة فقط. ## ⚠ قاعدة نطاق ثابتة — لا تُخالَف هذا المسار **منفصل كليًا** عن أي عمل يخص `index.html` أو مستودع BICC على GitHub أو أداة المقارن"
   },
   {
-    "source_id": "SRC-005",
+    "source_id": "SRC-007",
     "path": "Credit Cards Terms and Conditions/03. Cards information from Claude Chrome prompt V4.md",
     "filename": "03. Cards information from Claude Chrome prompt V4.md",
     "extension": ".md",
@@ -90,7 +126,7 @@
     "sample": "البنك الأهلي السعودي : تاريخ جمع البيانات: 29/7/2026. المصدر الأساسي: النسخة الإنجليزية لموقع البنك الأهلي السعودي (alahli.com/en)، مع الرجوع لملف PDF الرسمي \"Terms & Conditions\" لبطاقات الائتمان (42 صفحة) لاستخراج الرسوم/APR بدقة، وتم التحقق من محاذاة كل جدول عبر قراءة إحداثيات x/y الفعلية للنص داخل ملف الـPDF (وليس النص الخطي المُسطَّح فقط) تفاديًا لخطأ محاذاة الأعمدة، وكذلك عبر قراءة خلايا جداول HTML الفعلية (table.rows/cells) في صفحات الموقع بدل النص المُسطَّح. نموذج الاكتساب العام لهذا ا"
   },
   {
-    "source_id": "SRC-006",
+    "source_id": "SRC-008",
     "path": "Credit Cards Terms and Conditions/AJB Credit-Card-Terms-And-Conditions.pdf",
     "filename": "AJB Credit-Card-Terms-And-Conditions.pdf",
     "extension": ".pdf",
@@ -108,7 +144,7 @@
     "sample": ") تعريفات 1 العميــل هــو الشــخص الــذي يتقــدم بطلــب البطاقــة ويكــون حامــل 1-1 البطاقــة الرئيســية، كمــا أنــه الشــخص المســؤول ائتمانيــاً عــن جميــع المبالــغ الماليــة المســتحقة والمترتبــة علــى اســتخدام وإصــدار البطاقــة الرئيســية والبطاقــات الإضافيــة. حامــل البطاقــة هــو الشــخص الــذي تصــدر البطاقــة باســمه، ومصطلــح 2-1 حامــل البطاقــة يشــمل العميــل حامــل البطاقــة الرئيســية كمــا يشــمل حاملــي البطاقــات الإضافيــة. العمليــة الدوليــة: هــي أي عمليــة تت"
   },
   {
-    "source_id": "SRC-007",
+    "source_id": "SRC-009",
     "path": "Credit Cards Terms and Conditions/ALBILAD 1-15-D002-E شروط وأحكام طلب بطاقة مداد متعددة العملات v2.pdf",
     "filename": "ALBILAD 1-15-D002-E شروط وأحكام طلب بطاقة مداد متعددة العملات v2.pdf",
     "extension": ".pdf",
@@ -126,7 +162,7 @@
     "sample": "Terms and Conditions Medad Multi-currency Application Form Terms and Conditions Medad Multi-currency Application Fees: The applicant vows (customer) to pay all the fees or costs of issuing or renewing the card, and he authorizes the bank to ded uct these fees automatically from his current account or from the account of the customer. As shown in I hereby declare that bank is able to classify the account stats for cards as shown below : ✓ Active Account :it would be classified as act"
   },
   {
-    "source_id": "SRC-008",
+    "source_id": "SRC-010",
     "path": "Credit Cards Terms and Conditions/ALBILAD Bank Albilad Medad Card Application English2023.pdf",
     "filename": "ALBILAD Bank Albilad Medad Card Application English2023.pdf",
     "extension": ".pdf",
@@ -144,7 +180,7 @@
     "sample": "FORM NO. 1-1-B083 Bank Albilad is a Saudi Joint Stock Company, with National Unified No.7001473102, Head Office: Al Mutamarat 8229, Building No 2 ,RIYADH 3952 - 12711 ,KSA. Under monitoring and supervision of Saudi Central Bank authority and licensed by Royal decree 48/M on 21/9/1425H (4/11/2004 G), Medad Application Form With VAT registration No. 300000712300003 Branch name: …………………………… Branch No.: …………………………… Date: ………/………./……………... Have Current Account? Yes No Preferable D"
   },
   {
-    "source_id": "SRC-009",
+    "source_id": "SRC-011",
     "path": "Credit Cards Terms and Conditions/ALBILAD Issuing ATM Card Request Form.pdf",
     "filename": "ALBILAD Issuing ATM Card Request Form.pdf",
     "extension": ".pdf",
@@ -162,7 +198,7 @@
     "sample": "With VAT registration No. 300000712300003 Issuing ATM card request form 1 / 7 Bank Albilad is a Saudi Joint Stock Company, with National Unified No. 7001473102, Head Office: Al Mutamarat 8229, Building No 2 ,RIYADH 3952 - 12711 ,KSA. Under monitoring and supervision of Saudi Central Bank authority and licensed by Royal decree 48/M on 21/9/1425H (4/11/2004 G), / / Date: Branch No.: Branch"
   },
   {
-    "source_id": "SRC-010",
+    "source_id": "SRC-012",
     "path": "Credit Cards Terms and Conditions/ALBILAD Tamkeen plus Card 2025.pdf",
     "filename": "ALBILAD Tamkeen plus Card 2025.pdf",
     "extension": ".pdf",
@@ -180,7 +216,7 @@
     "sample": "1-15 Client's name ........................................................ Client Signature .............................................. Bank Albilad - a Saudi joint stock company with a unified national number 7001473102 and the address of its headquarters at 8229 Al Mutamarat, Unit No. (2), Riyadh 12711-3952, Kingdom of Saudi Arabia, subject to the supervision and control of the Saudi Central Bank and licensed by Royal Decree M/48 dated 21/9/1425 AH (November 4, 2004). Murabaha Card"
   },
   {
-    "source_id": "SRC-011",
+    "source_id": "SRC-013",
     "path": "Credit Cards Terms and Conditions/ALBILAD credit card 2025.pdf",
     "filename": "ALBILAD credit card 2025.pdf",
     "extension": ".pdf",
@@ -198,7 +234,7 @@
     "sample": "Form No.1-1-B079 - Tax Registration Number 300000712300003 Client Name: 1 / 12 Client Signature Al Bilad Bank, a Saudi Joint Stock Company with Unified National Number 7001473102 and registered head office at 8229 Al-Mu'tamarat District, Unit No. (2), Riyadh 12711 – 3952, Kingdom of Saudi Arabia, is subject to the supervision and control of the Saudi Central Bank and licensed under Royal Decree No. 48/M dated on21/9/1425 AH (November 4, 2004 AD) Albilad Credit Card Application Form Br"
   },
   {
-    "source_id": "SRC-012",
+    "source_id": "SRC-014",
     "path": "Credit Cards Terms and Conditions/ALINMA CC Terms and Condition Form V4.pdf",
     "filename": "ALINMA CC Terms and Condition Form V4.pdf",
     "extension": ".pdf",
@@ -216,7 +252,7 @@
     "sample": "ﺷﺮﻭﻁ ﻭ alinma Credit Card / Charge Card Terms and Conditions Preamble alef_hamza_above.isolGeneral Terms alinma Bank is pleased to issue types of Sharia’h-compliant cards (the “Cards”). These cards enable their holders to execute cash withdrawals from ATMs and obtain goods and services. These terms and conditions shall govern the relationship between Alinma Bank (the issuer) and the Client (the cardholder) and establish a relationship in which the issuer shall pay to the accepting p"
   },
   {
-    "source_id": "SRC-013",
+    "source_id": "SRC-015",
     "path": "Credit Cards Terms and Conditions/ALINMA Prapaid-TC-V7.pdf",
     "filename": "ALINMA Prapaid-TC-V7.pdf",
     "extension": ".pdf",
@@ -234,7 +270,7 @@
     "sample": "alef_hamza_above.isol Preamble General Terms ﺍﻟﺤﻤﺪ ﺍﻟﻠﻪ ﻭﺣﺪﻩ ﻓﻴﺴﺮ ﺍﻟﻤﻨﺨﻔﺾ ﻟ ﺣﺎﻣﻠﻴﻬﺎ ﻣﻦ ﺍﻟﺴﺤﺐ ﺍﻟﻨﻘﺪﻱ ﻣﻦ ﻭﺍﻟﺨﺪﻣﺎﺕ ﺍﻟﻤﺒﺎﺣﺔ ﺷﺮﻋﺎً ﺍ ﺍﻟﻤﺼﺪﺭ ﺑﺎﻟﺪﻓﻊ ﻋﻦ ﺣﺎﻣﻞ ﺍﻟﺒﻄﺎﻗﺔ ﻟﻘﺎﺑﻠﻬﺎ ﻟﻠﺸﺮﻭﻁ ﻭﺍ alinma Bank is pleased to issue types of alinma Low Limit cards (the Cards”). These cards enable their holders to execute cash withdrawals from ATMs and obtain goods and services. These terms and conditions shall govern the relationship between alinma Bank (the issuer) and the Client (the cardholder) and estab"
   },
   {
-    "source_id": "SRC-014",
+    "source_id": "SRC-016",
     "path": "Credit Cards Terms and Conditions/ALINMA Updated Mada-Card-Terms-Conditions-Debit-card.pdf",
     "filename": "ALINMA Updated Mada-Card-Terms-Conditions-Debit-card.pdf",
     "extension": ".pdf",
@@ -252,7 +288,7 @@
     "sample": "ﺭﺳﻮﻡ ﻭﺗﻜﺎﻟﻴﻒ ﺑﻄﺎﻗﺔ ﺍ Alinma mada debit card Charges and Fees ﺳﻴﺘﻢ ﺗﻄﺒﻴﻖ ﺿﺮﻳﺒﺔ ﺍﻟﻘﻴﻤﺔ ﺍﻟﻤﻀﺎﻓﺔ ﺑﻨﺴﺒﺔ VAT will be applied at a rate of 15% and added to all fees on banking services ﺭﺳﻮﻡ ﺍﻟﻌﻤﻠﻴﺎﺕ ﺍﻟﺪﻭﻟﻴﺔ International transactions fee ﺭﺳﻮﻡ Primary Issuance Fee ﺑﺪﻭﻥ ﺭﺳﻮﻡ Nil ﺭﺳﻮﻡ Supplementary Issuance Fee one.indic/zero.indic SAR 10 ﺭﺳﻮﻡ ﺗﺠﺪﻳﺪ ﺍﻟﺒﻄﺎﻗﺔ ﺍ Primary Renewal Fee ﺑﺪﻭﻥ ﺭﺳﻮﻡ Nil ﺭﺳﻮﻡ ﺗﺠﺪﻳﺪ ﺍﻟﺒﻄﺎﻗﺔ ﺍ Supplementary Renewal Fee ﺑﺪﻭﻥ ﺭﺳﻮﻡ Nil ﺭﺳﻮﻡ ﻋﻤﻠﻴﺎﺕ ﻧﻘﺎﻁ ﺍﻟﺒﻴﻊ ﻭﺍ Local Point of Sale and In"
   },
   {
-    "source_id": "SRC-015",
+    "source_id": "SRC-017",
     "path": "Credit Cards Terms and Conditions/ALINMA akthr-Travel-Credit-Card-Terms-and-Conditions-26July26.pdf",
     "filename": "ALINMA akthr-Travel-Credit-Card-Terms-and-Conditions-26July26.pdf",
     "extension": ".pdf",
@@ -270,7 +306,7 @@
     "sample": "/uni06601 /uni062F.fina/uni064A.medi/uni0647.medi/uni0645.medi/uni062A.initPreamble alinma Bank is pleased to issue Sharia’h-compliant cards/uni061B Travel Akthr Credit Credit Card (the “Cards”). These cards with a credit limit that enable their holders to execute cash withdrawals from A TMs and obtain goods and services. These terms and conditions shall govern the relationship between Alinma Bank (the issuer) and the Client (the cardholder) and establish a relationship in which the issuer"
   },
   {
-    "source_id": "SRC-016",
+    "source_id": "SRC-018",
     "path": "Credit Cards Terms and Conditions/AMERICAN EXPRESS 18.8-amex-cm-agreement-april-2026-v6-en.pdf",
     "filename": "AMERICAN EXPRESS 18.8-amex-cm-agreement-april-2026-v6-en.pdf",
     "extension": ".pdf",
@@ -288,7 +324,7 @@
     "sample": "CARDMEMBER AGREEMENT American Express Saudi Arabia | Closed Joint Stock Company | Contributed Capital: SAR 100,000,000 | VAT Number: 300000606800003 | Kingdom of Saudi Arabia, Riyadh | Registration Number: 1010183222 | Unified Number: 7001453476 | Licensor and License Number: (Saudi Central Bank - 40/201512/أش| Subject to the supervision and control of SAMA (American Express Saudi Arabia is regulated and supervised by the Saudi Central Bank) © 2025 American Express | Address: 2213 King Abdull"
   },
   {
-    "source_id": "SRC-017",
+    "source_id": "SRC-019",
     "path": "Credit Cards Terms and Conditions/ANB Al Fursan Credit Cards.pdf",
     "filename": "ANB Al Fursan Credit Cards.pdf",
     "extension": ".pdf",
@@ -306,7 +342,7 @@
     "sample": "Customer/ Cardholder: The person who applies for the issuance of a credit card from the bank (primary card, and/or supplementary card), Cardholder is the person whose name appears on the card, and he is also the person responsible for all amounts of money due and use of the primary card and/or supplementary cards. Card: Any primary card and/or supplementary cards issued to the customer (at his request) including, but not limited to, the main and/or secondary digital and plastic cards issued"
   },
   {
-    "source_id": "SRC-018",
+    "source_id": "SRC-020",
     "path": "Credit Cards Terms and Conditions/ANB Alfursan Cards contract_EN.pdf",
     "filename": "ANB Alfursan Cards contract_EN.pdf",
     "extension": ".pdf",
@@ -324,7 +360,7 @@
     "sample": "Customer/ Cardholder: The person who applies for the issuance of a credit card from the bank (primary card, and/or supplementary card), Cardholder is the person whose name appears on the card, and he is also the person responsible for all amounts of money due and use of the primary card and/or supplementary cards. Card: Any primary card and/or supplementary cards issued to the customer (at his request) including, but not limited to, the main and/or secondary digital and plastic cards issued"
   },
   {
-    "source_id": "SRC-019",
+    "source_id": "SRC-021",
     "path": "Credit Cards Terms and Conditions/ANB Digital Cashback_EN_V3.pdf",
     "filename": "ANB Digital Cashback_EN_V3.pdf",
     "extension": ".pdf",
@@ -342,7 +378,7 @@
     "sample": "1. Customer: The customer is the person who applies to obtain the card and is the primary card holder. He is also responsible for all due amounts arising out of or consequent upon issuance and utilization of the primary and supplementary cards. 2. Cardholder: Cardholder is the person whose name appears on the card and the term cardholder includes the primary cardholder and the holders of supplementary cards. 3. Account statement: It is a monthly statement issued by the bank to the cardholder"
   },
   {
-    "source_id": "SRC-020",
+    "source_id": "SRC-022",
     "path": "Credit Cards Terms and Conditions/ANB Generic Credit Card Terms and Conditions_EN_V3.pdf",
     "filename": "ANB Generic Credit Card Terms and Conditions_EN_V3.pdf",
     "extension": ".pdf",
@@ -360,7 +396,7 @@
     "sample": "1. Standard De/f_initions: Credit Card Terms and Conditions Arab national bank will issue the Credit Card in accordance with the following Terms and Conditions: Customer/ Cardholder: The person who applies for the issuance of a credit card from the bank (primary card, and/or supplementary card), Cardholder is the person whose name appears on the card, and he is also the person responsible for all amounts of money due and use of the primary card and/or supplementary cards. Card: Any primary"
   },
   {
-    "source_id": "SRC-021",
+    "source_id": "SRC-023",
     "path": "Credit Cards Terms and Conditions/ANB Generic Credit cards contract_EN.pdf",
     "filename": "ANB Generic Credit cards contract_EN.pdf",
     "extension": ".pdf",
@@ -378,7 +414,7 @@
     "sample": "1. Standard De/f_initions: Credit Card Terms and Conditions Arab national bank will issue the Credit Card in accordance with the following Terms and Conditions: Customer/ Cardholder: The person who applies for the issuance of a credit card from the bank (primary card, and/or supplementary card), Cardholder is the person whose name appears on the card, and he is also the person responsible for all amounts of money due and use of the primary card and/or supplementary cards. Card: Any primary"
   },
   {
-    "source_id": "SRC-022",
+    "source_id": "SRC-024",
     "path": "Credit Cards Terms and Conditions/ANB Low Limit _EN_v3.pdf",
     "filename": "ANB Low Limit _EN_v3.pdf",
     "extension": ".pdf",
@@ -396,7 +432,7 @@
     "sample": "1. Customer: The customer is the person who applies to obtain the card and is the primary card holder. He is also responsible for all due amounts arising out of or consequent upon issuance and utilization of the primary and supplementary cards. 2. Cardholder: Cardholder is the person whose name appears on the card and the term cardholder includes the primary cardholder and the holders of supplementary cards. 3. Card limit: The bank issues the card with a credit limit of SAR 5 only. 4. Acc"
   },
   {
-    "source_id": "SRC-023",
+    "source_id": "SRC-025",
     "path": "Credit Cards Terms and Conditions/ANB mada card English TC 8 MAR Outline (1).pdf",
     "filename": "ANB mada card English TC 8 MAR Outline (1).pdf",
     "extension": ".pdf",
@@ -414,7 +450,7 @@
     "sample": "Terms and Conditions for mada card of Arab National Bank (anb) The applicant (hereinafter called the customer) accepts the following terms and conditions for using anb Mada Debit card (hereinafter called the card), issued by Arab National Bank (anb) (hereinafter called the Bank). used in transacting through the ATM and point of sale provided that the card shall remain the property of the Bank and will be surrendered to the bank upon request. 2. Payment transactions made through electronic"
   },
   {
-    "source_id": "SRC-024",
+    "source_id": "SRC-026",
     "path": "Credit Cards Terms and Conditions/BSF Alfursan Infinite Update.pdf",
     "filename": "BSF Alfursan Infinite Update.pdf",
     "extension": ".pdf",
@@ -432,7 +468,7 @@
     "sample": "BSF Alfursan Infinite Update Effective 4th February 2026 1.Alfursan Infinite Miles Earning Rate 2.Quarterly Bonus Miles EEA countries From February 4th until May 3rd, 2026*** Earning Rate Transactions inside KSA Transactions inside KSA (on specific merchant categories*) International (EEA Countries**) International Existing New Quarterly Bonus Existing 45,000 30,000 Miles 45,000 Miles Update Spending Criteria Quarterly Miles 1 = 1 Mile*** 3 = 1 Mile 8 = 1 Mile 3 = 1 Mile 2.5 = 1 Mile 2.5"
   },
   {
-    "source_id": "SRC-025",
+    "source_id": "SRC-027",
     "path": "Credit Cards Terms and Conditions/BSF EF.01.021.03_Credit_Card_Agreement.docx",
     "filename": "BSF EF.01.021.03_Credit_Card_Agreement.docx",
     "extension": ".docx",
@@ -450,7 +486,7 @@
     "sample": "Where would you like the Credit card to be sent? ما هو العنوان الذي تريد ن ترسل البطاقة االئ تمانية إليه؟ Branch الفرع Residence السكن AlFursan Membership Number: :الفرسان برنامج عضوية رقم AlMosafer Membership Number: :المسافر عضوية رقم Personal Details الشخصية البيانات Name: Family العائلة Middle أوسط ا First أول ا االسم: Title: Other اخر Miss االنسة Mrs. :السيدة Mr. السيد Dr. تور دك اللقب: ID Number: :الهوية رقم ID Type: Resident ID مقيم هوية National ID وطنية هوية ن"
   },
   {
-    "source_id": "SRC-026",
+    "source_id": "SRC-028",
     "path": "Credit Cards Terms and Conditions/BSF EF.01.021.03_Credit_Card_Agreement.pdf",
     "filename": "BSF EF.01.021.03_Credit_Card_Agreement.pdf",
     "extension": ".pdf",
@@ -468,7 +504,7 @@
     "sample": "اتفاقية بطاقة ائتمانية Credit Card Agreement Public Banque Saudi Fransi, Saudi Joint stock company, Capital of 25,000,000,000 C.R. No 1010073368 (unified Number 7000025333) P.O. Box 56006 Riyadh 11554, Telephone +966112899999, Riyadh 12624 – 2722, Website bsf.sa, Founded under license duly promulgated by royal decree No 23/m dated 17/06/1397H. and it is under Saudi Central Bank supervision and control. البنك السعودي الفرنسي -شركة مساهمة سعودية برأس مال 25,000,000,000 ريال سعودي"
   },
   {
-    "source_id": "SRC-027",
+    "source_id": "SRC-029",
     "path": "Credit Cards Terms and Conditions/Bank Albilad Travel Rewards.pdf",
     "filename": "Bank Albilad Travel Rewards.pdf",
     "extension": ".pdf",
@@ -486,7 +522,7 @@
     "sample": "TERMS AND CONDITIONS 1. Introduction 2. Definitions These Terms and Conditions (referred to hereinafter as T&C) govern the use of the Bank Albilad Travel Pass Points Program, the collection of Travel Pass points, the membership of the Bank Albilad Travel Pass Points Program, and the use of the Albilad Travel Pass website. By accessing and/or using any page of the website and the services it offers, the Member declares that the Member has read, understood, and accepted the following terms, condit"
   },
   {
-    "source_id": "SRC-028",
+    "source_id": "SRC-030",
     "path": "Credit Cards Terms and Conditions/Good message From ANB Site.rtf",
     "filename": "Good message From ANB Site.rtf",
     "extension": ".rtf",
@@ -504,7 +540,7 @@
     "sample": "\\* 02020603050405020304 Times New Roman; \\* 020b0604020202020204 Arial; \\* 02070309020205020404 Courier New; \\* 05050102010706020507 Symbol; \\* 05000000000000000000 Wingdings; \\* 02040503050406030204 Cambria Math; Aptos; \\* 02020603050405020304 Times New Roman; \\* 02020603050405020304 Times New Roman; Aptos Display; \\* 02020603050405020304 Times New Roman; \\* 02020603050405020304 Times N"
   },
   {
-    "source_id": "SRC-029",
+    "source_id": "SRC-031",
     "path": "Credit Cards Terms and Conditions/RAJHI Cash Back EN.pdf",
     "filename": "RAJHI Cash Back EN.pdf",
     "extension": ".pdf",
@@ -522,7 +558,7 @@
     "sample": "Praise be to Allah alone, and peace and blessings be upon that who have no prophet after him: alrajhi bank pleasured to issue its Cashback Plus Credit Cards in accordance with Shari’a regulations, which enables cardholder to withdraw cash from ATMs/Transfer amount, as well as buy goods and services legally and as per Sharia guidelines permissible. The terms and conditions of the issuance of the card from alrajhi bank govern the relationship between alrajhi bank and the cardholder, and establi"
   },
   {
-    "source_id": "SRC-030",
+    "source_id": "SRC-032",
     "path": "Credit Cards Terms and Conditions/RAJHI Charge Card Eng.pdf",
     "filename": "RAJHI Charge Card Eng.pdf",
     "extension": ".pdf",
@@ -540,7 +576,7 @@
     "sample": "Alrajhi bank Charge Credit Cards Terms and Conditions Praise be to God alone, and peace and blessings be upon that who have no prophet after him: Al Rajhi Bank is pleasured to issue its charge credit card in accordance with Shari’a regulations, which enables cardholder to withdraw cash from ATMs, as well as buy goods and services legally permissible, without any interest, with the enjoyment of an appropriate grace period. The terms and conditions of the issuance of the card from Al Rajhi Ba"
   },
   {
-    "source_id": "SRC-031",
+    "source_id": "SRC-033",
     "path": "Credit Cards Terms and Conditions/RAJHI Credit Cards Eng- May-26.pdf",
     "filename": "RAJHI Credit Cards Eng- May-26.pdf",
     "extension": ".pdf",
@@ -558,7 +594,7 @@
     "sample": "Praise be to Allah alone, and peace and blessings be upon that who have no prophet after him: alrajhi bank pleasured to issue its credit card in accordance with Shari’a regulations, which enables cardholder to withdraw cash from ATMs/Transfer amount, as well as buy goods and services legally and as per Sharia guidelines permissible. The terms and conditions of the issuance of the card from alrajhi bank govern the relationship between alrajhi bank and the cardholder, and establish a relations"
   },
   {
-    "source_id": "SRC-032",
+    "source_id": "SRC-034",
     "path": "Credit Cards Terms and Conditions/RAJHI Digital Cashback Card eng.pdf",
     "filename": "RAJHI Digital Cashback Card eng.pdf",
     "extension": ".pdf",
@@ -576,7 +612,7 @@
     "sample": "Praise be to God alone, and peace and blessings be upon that who have no prophet after him: Al Rajhi Bank is pleased to issue this card in accordance with Shari’a regulations, which enables its holders to obtain legally permissible goods and services. In addition, the customer can apply for physical card through Mobile app. The terms and conditions of the issuance of the Digital Cashback Card from Al Rajhi Bank govern the relationship between Al Rajhi Bank and the Cardholder, and establish"
   },
   {
-    "source_id": "SRC-033",
+    "source_id": "SRC-035",
     "path": "Credit Cards Terms and Conditions/RAJHI Flynas Card Eng-May-26.pdf",
     "filename": "RAJHI Flynas Card Eng-May-26.pdf",
     "extension": ".pdf",
@@ -594,7 +630,7 @@
     "sample": "Praise be to Allah alone, and peace and blessings be upon that who have no prophet after him: alrajhi bank pleasured to issue its flynas credit card in accordance with Shari’a regula- tions, which enables cardholder to withdraw cash from ATMs/Transfer amount, as well as buy goods and services legally and as per Sharia guidelines permissible. The terms and conditions of the issuance of the card from alrajhi bank govern the relation- ship between alrajhi bank and the cardholder, and establish a"
   },
   {
-    "source_id": "SRC-034",
+    "source_id": "SRC-036",
     "path": "Credit Cards Terms and Conditions/RAJHI Fursan Card Eng-May-26.pdf",
     "filename": "RAJHI Fursan Card Eng-May-26.pdf",
     "extension": ".pdf",
@@ -612,7 +648,7 @@
     "sample": "Al Fursan credit cards terms and conditions Praise be to Allah alone, and peace and blessings be upon that who have no prophet after him: alrajhi bank pleasured to issue its Al Fursan credit cards in accordance with Shari’a regulations, which enables cardholder to withdraw cash from ATMs/Trans - fer amount, as well as buy goods and services legally and as per Sharia guidelines permissible. The terms and conditions of the issuance of the card from alrajhi bank govern the relationship between"
   },
   {
-    "source_id": "SRC-035",
+    "source_id": "SRC-037",
     "path": "Credit Cards Terms and Conditions/RAJHI Mariot Bonvoy Card Eng.pdf",
     "filename": "RAJHI Mariot Bonvoy Card Eng.pdf",
     "extension": ".pdf",
@@ -630,7 +666,7 @@
     "sample": "Praise be to Allah alone, and peace and blessings be upon that who have no prophet after him: alrajhi bank pleasured to issue its Marriott Bonvoy® credit card in accordance with Shari’a regulations, which enables cardholder to withdraw cash from ATMs/Transfer amount, as well as buy goods and services legally and as per Sharia guidelines permissible. The terms and conditions of the issuance of the card from alrajhi bank govern the relationship between alrajhi bank and the cardholder, and est"
   },
   {
-    "source_id": "SRC-036",
+    "source_id": "SRC-038",
     "path": "Credit Cards Terms and Conditions/RAJHI Travel Plus eng.pdf",
     "filename": "RAJHI Travel Plus eng.pdf",
     "extension": ".pdf",
@@ -648,7 +684,7 @@
     "sample": "Praise be to God alone, and peace and blessings be upon that who have no prophet after him: Al Rajhi Bank is pleased to issue this card in accordance with Shari’a regulations. It is a card with a low credit limit of 1 USD and it enables its holders to transfer funds into the card balance with multible currencies which are: (US Dollar, Euros, GB Pounds, UAE Dirhams, and Saudi Riyals). It also enables its holders to withdraw cash from ATM machines and obtain legally permissible goods and serv"
   },
   {
-    "source_id": "SRC-037",
+    "source_id": "SRC-039",
     "path": "Credit Cards Terms and Conditions/RAJHI gamers Card english.pdf",
     "filename": "RAJHI gamers Card english.pdf",
     "extension": ".pdf",
@@ -666,7 +702,7 @@
     "sample": "Praise be to God alone, and peace and blessings be upon that who have no prophet after him: Al Rajhi Bank is pleased to issue this card in accordance with Shari’a regulations, which enables its holders to obtain legally permissible goods and services. In addition, the customer can apply for physical card through Mobile app. The terms and conditions of the issuance of the Digital Cashback Card from Al Rajhi Bank govern the relationship between Al Rajhi Bank and the Cardholder, and establish"
   },
   {
-    "source_id": "SRC-038",
+    "source_id": "SRC-040",
     "path": "Credit Cards Terms and Conditions/Readme.md",
     "filename": "Readme.md",
     "extension": ".md",
@@ -684,7 +720,7 @@
     "sample": "value"
   },
   {
-    "source_id": "SRC-039",
+    "source_id": "SRC-041",
     "path": "Credit Cards Terms and Conditions/Riyad Bank CC.pdf",
     "filename": "Riyad Bank CC.pdf",
     "extension": ".pdf",
@@ -702,7 +738,7 @@
     "sample": "• • • ➢ ➢ • • • • • • • • • • • • • • • • • • • • • • • • : % % % % %"
   },
   {
-    "source_id": "SRC-040",
+    "source_id": "SRC-042",
     "path": "Credit Cards Terms and Conditions/Riyad Bank Mada debit card terms and conditions V1.5 (003).pdf",
     "filename": "Riyad Bank Mada debit card terms and conditions V1.5 (003).pdf",
     "extension": ".pdf",
@@ -720,7 +756,7 @@
     "sample": "شروط وأحكام بـطـاقـة الـصـراف الآلي مدى Mada Card terms and conditions تعريفات أ. المقصود بكلمة \"البنك\" هو بنك الرياض و/أو المتنازل لهم منه و/أو المفوضين من البنك. ب. المقصود بكلمة \"حامل البطاقة\" هو الشخص الذي يظهر اسمه و/أو يوقع على طلب إصدار البطاقة. ج. المقصود بكلمة \"البطاقة\" هو بطاقة الصرف الآلي / أو نقاط البيع، مع البطاقات الإلحاقية لها، التي يصدرها البنك لحامل البطاقة والتي تستخدم كأداة دفع خصماً على الحساب الدائن لحامل البطاقة لدى البنك، سواء في"
   },
   {
-    "source_id": "SRC-041",
+    "source_id": "SRC-043",
     "path": "Credit Cards Terms and Conditions/SAB Cashback terms and Conditions.pdf",
     "filename": "SAB Cashback terms and Conditions.pdf",
     "extension": ".pdf",
@@ -738,7 +774,7 @@
     "sample": "\"اﻷﺳـــﺘﺮداد اﻟﻨﻘـــﺪي\" ﻳﻌﻨـــﻲ اﻟﻤﺒﻠﻎ اﻟﻤﻜﺘﺴـــﺐ ﻣﻦ اﻟﻌﻤﻠﻴـــﺎت اﻟﻤﺆﻫﻠﺔ ﻋﻠﻰ اﻟﻨﺤـــﻮ اﻟﻤﻨﺼﻮص ﻋﻠﻴـــﻪ ﻓﻲ ﻫﺬا اﻟﻤﺴـــﺘﻨﺪ أو ﻋﻠﻰ اﻟﻨﺤﻮ اﻟﺬي ﻳﻘﺮره اﻟﺒﻨﻚ وﻓﻘًﺎ ﻟﺘﻘﺪﻳﺮه اﻟﻤﻄﻠﻖ واﻟﺘﻲ ﺳـــﺘﻘﻴﺪ ﻓـــﻲ ﺣﺴـــﺎب ﺑﻄﺎﻗـــﺔ اﻻﺳـــﺘﺮداد اﻟﻨﻘﺪي ﺑﻌـــﺪ ﻧﺸـــﺮ اﻟﻌﻤﻠﻴـــﺎت ذات اﻟﺼﻠﺔ ﻓﻲ ﺣﺴـــﺎب ﺑﻄﺎﻗﺔ اﻟﻌﻤﻴﻞ ؛ \"اﻟﻌﻤﻠﻴـــﺎت اﻟﻤﺆﻫﻠـــﺔ\" ﺗﻌﻨـــﻲ ﺟﻤﻴﻊ ﻋﻤﻠﻴﺎت اﻟﺒﻴﻊ ﺑﺎﻟﺘﺠﺰﺋﺔ ، ﻓﻲ ﻧﻘـــﺎط اﻟﺒﻴﻊ أو ﻋﺒﺮ اﻹﻧﺘﺮﻧﺖ 1 ، واﻟﺘـــﻲ ﻳﺘـــﻢ ﺗﺤﺼﻴﻠﻬﺎ / ﺗﺴـــﺠﻴﻠﻬﺎ ﻓـــﻲ ﺑﻄﺎﻗﺔ اﺋﺘﻤﺎن اﻻﺳـــﺘﺮداد اﻟﻨﻘﺪي ﻟﺤﺎﻣـــﻞ اﻟﺒﻄﺎﻗﺔ ، ﺑﺎﺳـــﺘﺜﻨﺎء اﻟ"
   },
   {
-    "source_id": "SRC-042",
+    "source_id": "SRC-044",
     "path": "Credit Cards Terms and Conditions/SAB sab-alfursan-offer-tcs-21jan26.pdf",
     "filename": "SAB sab-alfursan-offer-tcs-21jan26.pdf",
     "extension": ".pdf",
@@ -756,7 +792,7 @@
     "sample": "Terms and Conditions ﻳﻨﺎﻳﺮ11ﻳﺴـــﺮي اﻟﻌـــﺮض ﻋﻠـــﻰ ﺑﺮﻧﺎﻣـــﺞ اﻷﻣﻴﺎل اﻷﺳﺎﺳـــﻴﺔ اﺑﺘﺪاءً ﻣـــﻦ ﺗﺎرﻳـــﺦ • 2026 ﻳﻮﻧﻴﻮ30 ﺣﺘـــﻰ2026 ﻳﺴـــﺮي اﻟﻌـــﺮض ﻋﻠﻰ ﺑﺮﻧﺎﻣـــﺞ اﻷﻣﻴـــﺎل اﻟﺘﺮﺣﻴﺒﻴﺔ واﻷﻣﻴﺎل اﻟﺮﺑﻊ ﺳـــﻨﻮﻳﺔ اﺑﺘﺪاءً• . 2026 ﻳﻮﻧﻴﻮ30 ﺣﺘﻰ2026 ﻳﻨﺎﻳـــﺮ1ﻣـــﻦ ﺗﺎرﻳﺦ ﻣﻦ اﻟﻌـــﺮض ﻣﺨﺼـــﺺ ﻓﻘﻂ ﻟﻠﻌـــﻤﻼء اﻟﺠﺪد اﻟﺬﻳـــﻦ ﺗﻘﺪﻣﻮا ﺑﻄﻠـــﺐ ﺑﻄﺎﻗﺔ اﻷول • اﻟﻔﺮﺳـــﺎن ﺑﻼك ﻣﺎﺳـــﺘﺮﻛﺎرد اﻻﺋﺘﻤﺎﻧﻴﺔ ﻷول ﻣـــﺮة ﺧﻼل ﻓﺘﺮة اﻟﻌﺮض. ﻟـــﻦ ﻳﺘﻤﻜﻦ اﻟﻌـــﻤﻼء اﻟﺬﻳﻦ ﻳﻘﻮﻣـــﻮن ﺑﺈﻏﻼق ﺑﻄﺎﻗﺔ اﻷول اﻟﻔﺮﺳـــﺎن اﻻﺋﺘﻤﺎﻧﻴــــــﺔ • اﻟﺤﺎﻟﻴﺔ اﻟ"
   },
   {
-    "source_id": "SRC-043",
+    "source_id": "SRC-045",
     "path": "Credit Cards Terms and Conditions/SAB sab-credit-card-application-with-tc-15july26-qatar.pdf",
     "filename": "SAB sab-credit-card-application-with-tc-15july26-qatar.pdf",
     "extension": ".pdf",
@@ -774,7 +810,7 @@
     "sample": "Personal information /aTehMarbuta.fina/aYeh.medi/aSad.medi/aKhah.medi/aShin.medi/aLam.init/aAlif /aTeh/aAlif.fina/aNun.init/aAlif.fina/aYeh.medi/aBeh.medi/aLam.init/aAlif :/aTehMarbuta.fina/aQaf.init/aAlif.fina/aTah.medi/aBeh.medi/aLam.init/aAlif /aAlifMaksura.fina/aLam.medi/aAyn.init /aReh.fina/aHeh.medi/aZah.medi/aYeh.init /aNun/aAlifHamza /aDal/aWaw.fina/aTeh.init /aAlif.fina/aMim.medi/aKaf.init /aComma /aKaf.fina/aMim.medi/aSin.init/aAlif (/aTeh/aAlif.fina/aFeh.init/aAlif.fina/aSin.medi/aMim"
   },
   {
-    "source_id": "SRC-044",
+    "source_id": "SRC-046",
     "path": "Credit Cards Terms and Conditions/SAB sab-credit-card-application-with-tc-9jan25.pdf",
     "filename": "SAB sab-credit-card-application-with-tc-9jan25.pdf",
     "extension": ".pdf",
@@ -792,7 +828,7 @@
     "sample": "Personal informationاﻟﺒﻴﺎﻧﺎت اﻟﺸﺨﺼﻴﺔ Your Employment ﻋﻤﻠﻚ اﺳﻤﻚ ، ﻛﻤﺎ ﺗﻮد أن ﻳﻈﻬﺮ ﻋﻠﻰ اﻟﺒﻄﺎﻗﺔ: ﺧﺎﻧﺔ ﺷﺎﻣﻼً اﻟﻤﺴﺎﻓﺎت( 20 )ﻻ ﻳﺰﻳﺪ ﻋﻦ اﻻﺳﻢ اﻟﻜﺎﻣﻞ: رﻗﻢ ﺑﻄﺎﻗﺔ اﻷﺣﻮال ﻟﻠﺴﻌﻮدﻳﻴﻦ أو رﻗﻢ اﻹﻗﺎﻣﺔ ﻟﻠﻤﻘﻴﻤﻴﻦ اﻟﺠﻨﺴﻴﺔ: Name, as it should appear on the Card: (not to exceed 20 characters including spaces) Full Name: ID No. (for Saudis) or Iqama No. (for Non-Saudis) Nationality: اﻟﺠﻨﺲ اﻟﺤﺎﻟﺔ اﻻﺟﺘﻤﺎﻋﻴﺔ: اﻟﺴﻜﻦ: ﻫﻞ ﺗﻤﻠﻚ ﺳﻴﺎرة: اﻟﺪراﺳﺔ: ﻣﻜﺎن اﻟﺘﻌﻠﻴﻢ : ذﻛﺮ ﻣﺘﺰوج ﻓﻴﻼ ﻧﻌﻢ ﺛﺎﻧﻮي وﻣﺎدون اﻟﺴﻌﻮدﻳﺔ اﻟﺠﻮال: اﻟﺒﺮﻳﺪ اﻹﻟﻜﺘﺮوﻧﻲ: ﻫ"
   },
   {
-    "source_id": "SRC-045",
+    "source_id": "SRC-047",
     "path": "Credit Cards Terms and Conditions/SAB sab-credit-card-application-with-tc-noon.pdf",
     "filename": "SAB sab-credit-card-application-with-tc-noon.pdf",
     "extension": ".pdf",
@@ -810,7 +846,7 @@
     "sample": "Personal information /aTehMarbuta.fina/aYeh.medi/aSad.medi/aKhah.medi/aShin.medi/aLam.init/aAlif /aTeh/aAlif.fina/aNun.init/aAlif.fina/aYeh.medi/aBeh.medi/aLam.init/aAlif :/aTehMarbuta.fina/aQaf.init/aAlif.fina/aTah.medi/aBeh.medi/aLam.init/aAlif /aAlifMaksura.fina/aLam.medi/aAyn.init /aReh.fina/aHeh.medi/aZah.medi/aYeh.init /aNun/aAlifHamza /aDal/aWaw.fina/aTeh.init /aAlif.fina/aMim.medi/aKaf.init /aComma /aKaf.fina/aMim.medi/aSin.init/aAlif (/aTeh/aAlif.fina/aFeh.init/aAlif.fina/aSin.medi/aMim"
   },
   {
-    "source_id": "SRC-046",
+    "source_id": "SRC-048",
     "path": "Credit Cards Terms and Conditions/SAB terms-and-conditions-of-sab-credit-cards-issuing.pdf",
     "filename": "SAB terms-and-conditions-of-sab-credit-cards-issuing.pdf",
     "extension": ".pdf",
@@ -828,7 +864,7 @@
     "sample": "9.14 This Agreement shall be construed and governed by the laws of the Kingdom of Saudi Arabia and any dispute shall be referred to the competent legal authority to decide on, that is consistent with Shariah principles. 9.15 The Bank has the right to reject any Credit Card transaction that contradicts with local regulations. 9.16 Fair Use Limit: means the limits set forth in the Fair Use Schedule of these terms and conditions. Speciﬁcally, the column entitled (Fair Use Limit). The custome"
   },
   {
-    "source_id": "SRC-047",
+    "source_id": "SRC-049",
     "path": "Credit Cards Terms and Conditions/SAIB C.13.011.30-Credit-Card-tnc.docx",
     "filename": "SAIB C.13.011.30-Credit-Card-tnc.docx",
     "extension": ".docx",
@@ -846,7 +882,7 @@
     "sample": "1. Definitions | 1. Definitions | 1. Definitions | 1. Definitions | 1. Definitions | 1. Definitions | 1. Definitions | 1. Definitions | 1. Definitions | 1. Definitions | 1. Definitions | 1. التعريفات | 1. التعريفات | 1. التعريفات | 1. التعريفات | 1. التعريفات | 1. التعريفات | 1. التعريفات | 1. التعريفات | 1. التعريفات | 1. التعريفات | 1. التعريفات The following terms and expressions shall have the meanings assigned to each: | The following terms and expressions shall have the meanings a"
   },
   {
-    "source_id": "SRC-048",
+    "source_id": "SRC-050",
     "path": "Credit Cards Terms and Conditions/SAIB C.13.076.16-travel-card-t-n-c.docx",
     "filename": "SAIB C.13.076.16-travel-card-t-n-c.docx",
     "extension": ".docx",
@@ -864,7 +900,7 @@
     "sample": "Fees And Charges | رسوم البطاقة The applicant has to pay all expenses and fees owed versus the issuance of the card or renewal of the card and the Bank reserves the right to deduct these fees and expenses automatically from the card account or from the customer's account in SAIB according to the following: | على حامل البطاقة دفع جميع الرسوم والمصاريف والنفقات المستحقة مقابل إصدار أو تجديد بطاقة السفر ويحتفظ البنك بحق خصم هذه الرسوم والمصاريف والنفقات تلقائياً من حساب بطاقة السفر أو من"
   },
   {
-    "source_id": "SRC-049",
+    "source_id": "SRC-051",
     "path": "Credit Cards Terms and Conditions/SAIB C.13.202.15-MADA-Card.pdf",
     "filename": "SAIB C.13.202.15-MADA-Card.pdf",
     "extension": ".pdf",
@@ -882,7 +918,7 @@
     "sample": "اﻟﺸﺮوط واﻷﺣﻜﺎم ﻟﺒﻄﺎﻗﺎت ﻣﺪى ﻣﻦ اﻟﺒﻨﻚ اﻟﺴﻌﻮدي ﻟﻼﺳﺘﺜﻤﺎر The Saudi Investment Bank MADA Card Terms and Conditions Signature: اﻟﺘﻮﻗﻴﻊ The Saudi Investment Bank, a Saudi joint -stock company with a paid -up capital of SAR 12,500,000,000 (12.5 billion SAR), registered under CRN 1010011570 and Unified Number 7000029889. Its registered address is P.O. Box 3533, Riyadh 11481, Kingdom of Saudi Arabia, with a national address at Sheikh Abdulrahman bin Hassan Street, Al-Ma’ather Dis"
   },
   {
-    "source_id": "SRC-050",
+    "source_id": "SRC-052",
     "path": "Credit Cards Terms and Conditions/SAIB C.13.225.07-Shopping-Card-Terms-n-Conditions.docx",
     "filename": "SAIB C.13.225.07-Shopping-Card-Terms-n-Conditions.docx",
     "extension": ".docx",
@@ -900,7 +936,7 @@
     "sample": "Fees and Charges | رسوم البطاقة The applicant has to pay all expenses and fees owed for the issuance of the card or renewal of the card and the Bank reserves the right to deduct these fees and expenses automatically from the card account or from the customer's account at SAIB according to the following table: | على حامل البطاقة دفع جميع الرسوم والمصاريف والنفقات المستحقة مقابل إصدار أو تجديد بطاقة التسوق EasyShopping ويحتفظ البنك بحق خصم هذه الرسوم والمصاريف والنفقات تلقائياً من حساب بطاقة"
   },
   {
-    "source_id": "SRC-051",
+    "source_id": "SRC-053",
     "path": "Credit Cards Terms and Conditions/SAIB C.RB_.028.04-toc.docx",
     "filename": "SAIB C.RB_.028.04-toc.docx",
     "extension": ".docx",
@@ -918,7 +954,7 @@
     "sample": "Services | الخدمات The Bank shall, subject to (i) the terms and conditions herein and (ii) compliance by the Client (The Owner of the Specific Bank Account) with the terms and conditions, provide the services set out below (collectively the “Services”): | يتعين على البنك تقديم الخدمات الواردة أدناه, (ويشار إليها \"بالخدمات\") مع مراعاه (1) الشروط والاحكام المنصوص عليها و (2) إلتزام العميل (المالك للحساب البنكي الأساسي) بتلك الشروط والاحكام.: 1-1 Manage the salary distribution process for th"
   },
   {
-    "source_id": "SRC-052",
+    "source_id": "SRC-054",
     "path": "Credit Cards Terms and Conditions/SAIB Products_Risk_SAMA_Low-limit_Credit_Cards_V3.pdf",
     "filename": "SAIB Products_Risk_SAMA_Low-limit_Credit_Cards_V3.pdf",
     "extension": ".pdf",
@@ -936,7 +972,7 @@
     "sample": "بطاقــات الحــد الائتمانــي المنخفض – مخاطــر المنتج Low-limit Credit Cards - Product Risks مخاطر المنتجبطاقات الحد الائتماني المنخفض – المعلومـات الشـخصية والسـرية المقدمـة للعميـل (مثـل الرقـم السـري ورقـم البطاقة) هي مسـؤولية العميل فـي المقام الأول، وفـي حال عـدم اسـتيفاء حامـل البطاقة لشـروط وأحـام بطاقات \"الحـد الائتمانـي المنخفـض\"، يحـق للبنك اتخـاذ الإجـراءات اللازمة التـي تتضمـن عواقـب محتملة علـى حامـل البطاقة. مسؤوليات حامل البطاقة: الاطــاع علــى الشــروط والأحــام ونمــاذج"
   },
   {
-    "source_id": "SRC-053",
+    "source_id": "SRC-055",
     "path": "Credit Cards Terms and Conditions/SNB cc-en-terms-and-conditions-form-2026-cc-only.pdf",
     "filename": "SNB cc-en-terms-and-conditions-form-2026-cc-only.pdf",
     "extension": ".pdf",
@@ -954,7 +990,7 @@
     "sample": "Saudi Joint Stock Company | Capital SAR 60,000,000,000 Fully Paid Up | Tax Number 300002471110003 | CT 4030001588 | Supervised by the Saudi Central Bank | Licensed under Royal Order No. 3737 issued on 20/4/1373AH (corresponding to 26/12/1953AD) | Main Building Saudi National Bank Tower King Abdullah Financial District King Fahd Road | 3208 – Al Aqiq District | Module No. 778 | Riyadh 13519-6676 | 920001000 |www.alahli.com General and Special Conditions for [Islamic Credit Card] Praise be"
   },
   {
-    "source_id": "SRC-054",
+    "source_id": "SRC-056",
     "path": "Credit Cards Terms and Conditions/SNB cc-en-terms-and-conditions-form-2026-with-flexi.pdf",
     "filename": "SNB cc-en-terms-and-conditions-form-2026-with-flexi.pdf",
     "extension": ".pdf",
@@ -972,7 +1008,7 @@
     "sample": "Saudi Joint Stock Company | Capital SAR 60,000,000,000 Fully Paid Up | Tax Number 300002471110003 | CT 4030001588 | Supervised by the Saudi Central Bank | Licensed under Royal Order No. 3737 issued on 20/4/1373AH (corresponding to 26/12/1953AD) | Main Building Saudi National Bank Tower King Abdullah Financial District King Fahd Road | 3208 – Al Aqiq District | Module No. 778 | Riyadh 13519-6676 | 920001000 |www.alahli.com General and Special Conditions for [Islamic Credit Card] Praise be"
   },
   {
-    "source_id": "SRC-055",
+    "source_id": "SRC-057",
     "path": "Credit Cards Terms and Conditions/SNB prepaid-cards-t-c-en.pdf",
     "filename": "SNB prepaid-cards-t-c-en.pdf",
     "extension": ".pdf",
@@ -990,7 +1026,7 @@
     "sample": "Prepaid Card Agreement Praise be to God alone, and prayers and peace be upon our master and Prophet Muhammad (PBUH) and upon all his / her family and companions. Now, an agreement has been reached between the following parties: First Party: The National Bank of Saudi Arabia | Saudi joint stock company | with a share capital of 44,780,000,000 SR fully paid | Tax number : 300002471110003 | C.R. 4030001588 | Subject to the supervision and control of the Central Bank of Saudi Arabia | Licensed un"
   },
   {
-    "source_id": "SRC-056",
+    "source_id": "SRC-058",
     "path": "Credit Cards Terms and Conditions/enbd_ksa_credit_cards_terms_and_conditions_en.pdf",
     "filename": "enbd_ksa_credit_cards_terms_and_conditions_en.pdf",
     "extension": ".pdf",
@@ -1008,7 +1044,7 @@
     "sample": "Subject to the approval of the Branch of the Emirates NBD Kingdom of Saudi Arabia (hereinafter referred to as the “Bank”) to issue and provide the Credit Card (to the “Cardholder” as defined below) under an application submitted by the Cardholder; the Cardholder hereby agrees to these Terms and Conditions as well as any terms and conditions - if any - set out in the filled-out Credit Card application form and/ or the approval letter and any other relevant document (hereinafter collectively"
   },
   {
-    "source_id": "SRC-057",
+    "source_id": "SRC-059",
     "path": "Credit Cards Terms and Conditions/index-update-manifest-2026-07-28.md",
     "filename": "index-update-manifest-2026-07-28.md",
     "extension": ".md",
@@ -1026,7 +1062,97 @@
     "sample": "# مانيفست جاهز للدفع إلى index.html / CARD_DB — مستودع BICC (2026-07-28) **الغرض:** هذا الملف مرجع ذاتي الاكتفاء لأي جلسة Claude Code تريد تحديث CARD_DB داخل `index.html` بمستودع `github.com/RoRoWeRwEr/BICC`. لا تحتاج قراءة ملف الإكسل الثنائي — كل بيانات `calcTier=precise` منظّمة هنا حسب البنك مع قيمها النهائية المعتمدة وروابط مصدرها. **قاعدة تشغيلية إلزامية:** ادفع فقط البطاقات المذكورة بقسم \"جاهز للدفع\" أدناه. أي بطاقة مذكورة بقسم \"⛔ لا تدفع — تعارض مفتوح\" يجب أن تبقى بقيمتها الحالية بـCARD_"
   },
   {
-    "source_id": "SRC-058",
+    "source_id": "SRC-060",
+    "path": "PROJECT_STATE.md",
+    "filename": "PROJECT_STATE.md",
+    "extension": ".md",
+    "size_bytes": 3805,
+    "sha256": "ffccd592d0015818b81b6dbd8a29503776dde59350534e73f5749eff6d0b1877",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-061",
+    "path": "docs/monitoring/README.md",
+    "filename": "README.md",
+    "extension": ".md",
+    "size_bytes": 3115,
+    "sha256": "255a791c428929ad0a5fb2c8c13da3511153f52cc48abc0728753f8504bfaf90",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "readable",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": 3113,
+    "text_sha256": "162efae674f5b183796fa452dbeb358c342c0f6d0131aebb930f08be946f4959",
+    "error": "",
+    "sample": "# Continuous bank-card monitoring The monitoring system watches official public sources for Saudi payment-card research. It is an early-warning system, not an evidence-ingestion or workbook-editing system. Riyad Bank is the first active bank; every issuer in the current research dataset has a registry entry so coverage can expand without changing the engine. ## What runs automatically GitHub Actions runs every Monday and Thursday at 06:17 Asia/Riyadh (03:17 UTC), or on demand. It downloads ea"
+  },
+  {
+    "source_id": "SRC-062",
+    "path": "docs/prompts/BANK_VALIDATION_TASK.md",
+    "filename": "BANK_VALIDATION_TASK.md",
+    "extension": ".md",
+    "size_bytes": 3990,
+    "sha256": "d00acb203e080d11d8efc5c417ded436f1a5714346893ad6e69285c7934fbc18",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-063",
+    "path": "docs/prompts/NEW_SOURCE_INGESTION_TASK.md",
+    "filename": "NEW_SOURCE_INGESTION_TASK.md",
+    "extension": ".md",
+    "size_bytes": 2841,
+    "sha256": "3a7039ebcb8e667ea8b24d18241a7107a979b69a608716b434f4d5fa480768f1",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-064",
+    "path": "monitoring/registry/banks.json",
+    "filename": "banks.json",
+    "extension": ".json",
+    "size_bytes": 4351,
+    "sha256": "9f9fef32fd22a953b77fc3d93dda101ab92fbf5c0d09edb2881a56f32eba281a",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-065",
     "path": "readme.md",
     "filename": "readme.md",
     "extension": ".md",
@@ -1044,25 +1170,25 @@
     "sample": "# CCIP Card Data Research This repository contains research collected for Saudi Arabian payment cards. It is permanently separate from CCIP platform migrations, databases, and application code. Purpose: - consolidate information - continue collection - validate data - prepare the final dataset for CCIP No data should be deleted. Original files remain unchanged. Raw files remain in `Credit Cards Terms and Conditions/`. Processing uses `working/`; authoritative deliverables are written to `o"
   },
   {
-    "source_id": "SRC-059",
+    "source_id": "SRC-066",
     "path": "scripts/README.md",
     "filename": "README.md",
     "extension": ".md",
-    "size_bytes": 580,
-    "sha256": "287b1aa25ae034c50db154f10539c91acc363d47bfeeec38827a4d1987f77bf9",
+    "size_bytes": 857,
+    "sha256": "bd0dc12eb2b24b1ae87c9593e96dc91100f36d97cf32d0bd7f815d2787f43e67",
     "suspected_duplicate": false,
     "duplicate_basis": "",
     "bank_mapping": "Unmapped / multi-bank",
     "status": "readable",
     "pages": "",
     "encrypted": false,
-    "text_chars": 580,
-    "text_sha256": "c174caa645683f3ad9273c019b78bfa87022f6caa0e63d74627bacb3ee54b888",
+    "text_chars": 857,
+    "text_sha256": "2c73918f9f8e64df264f5e12682fd58d46f622986fa308308cf9d47998fbc837",
     "error": "",
     "sample": "# Automation Use the bundled Python runtime when available: ```bash PYTHON=/Users/rayanmaghrabi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 $PYTHON scripts/consolidate.py $PYTHON scripts/validate_outputs.py $PYTHON scripts/compare_workbooks.py $PYTHON scripts/check_reproducibility.py ``` The scripts read immutable files under `Credit Cards Terms and Conditions/` and write only to `working/`, `docs/`, and `outputs/`. They are designed to be rerunnable. The workb"
   },
   {
-    "source_id": "SRC-060",
+    "source_id": "SRC-067",
     "path": "scripts/check_reproducibility.py",
     "filename": "check_reproducibility.py",
     "extension": ".py",
@@ -1080,7 +1206,7 @@
     "sample": ""
   },
   {
-    "source_id": "SRC-061",
+    "source_id": "SRC-068",
     "path": "scripts/compare_workbooks.py",
     "filename": "compare_workbooks.py",
     "extension": ".py",
@@ -1098,12 +1224,12 @@
     "sample": ""
   },
   {
-    "source_id": "SRC-062",
+    "source_id": "SRC-069",
     "path": "scripts/consolidate.py",
     "filename": "consolidate.py",
     "extension": ".py",
-    "size_bytes": 40585,
-    "sha256": "89b60322e605d866da3feceb09f5718f0ff6d9dcce788ed600021e1666e6cc09",
+    "size_bytes": 40693,
+    "sha256": "4069d9fa4f7b07132cd31ea900f50d28787a07e9b6a53c017c2864d531b8b483",
     "suspected_duplicate": false,
     "duplicate_basis": "",
     "bank_mapping": "Unmapped / multi-bank",
@@ -1116,12 +1242,48 @@
     "sample": ""
   },
   {
-    "source_id": "SRC-063",
+    "source_id": "SRC-070",
+    "path": "scripts/monitor_bank_sources.py",
+    "filename": "monitor_bank_sources.py",
+    "extension": ".py",
+    "size_bytes": 9771,
+    "sha256": "22068b47068390dfbfab37da813ef5b0db92b38b8bd5f4d21b6adc0abb244897",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-071",
+    "path": "scripts/render_monitoring_notice.py",
+    "filename": "render_monitoring_notice.py",
+    "extension": ".py",
+    "size_bytes": 1276,
+    "sha256": "dfda5a696e780283123b7bf7ea974e8a39824b24d8947ab1ac6e534232400867",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-072",
     "path": "scripts/render_workbook.mjs",
     "filename": "render_workbook.mjs",
     "extension": ".mjs",
-    "size_bytes": 2141,
-    "sha256": "8b3611e1cd9ea23ce9966ce0feafed63ff1974b54b86a932d5e3096ec038c89d",
+    "size_bytes": 2172,
+    "sha256": "0734d8d0a85b1deb90081bab0ac8ec4438b97a326d0a2066725b06cdf905e596",
     "suspected_duplicate": false,
     "duplicate_basis": "",
     "bank_mapping": "Unmapped / multi-bank",
@@ -1134,12 +1296,48 @@
     "sample": ""
   },
   {
-    "source_id": "SRC-064",
+    "source_id": "SRC-073",
+    "path": "scripts/validate_anb_phase2.py",
+    "filename": "validate_anb_phase2.py",
+    "extension": ".py",
+    "size_bytes": 14085,
+    "sha256": "b3c8c566b9640b5a4e3775651bec8b78e532e112f744e6481ebceeda4b3bf160",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Arab National Bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-074",
     "path": "scripts/validate_outputs.py",
     "filename": "validate_outputs.py",
     "extension": ".py",
-    "size_bytes": 5633,
-    "sha256": "9635584983166b54c75ff615c5f68e8a71b09f742b962e3068dda302ff5054c8",
+    "size_bytes": 7835,
+    "sha256": "1977189355b78659ea3e705841403cdac3f82d882a8fc4860628c524ecc05b51",
+    "suspected_duplicate": false,
+    "duplicate_basis": "",
+    "bank_mapping": "Unmapped / multi-bank",
+    "status": "repository file",
+    "pages": "",
+    "encrypted": false,
+    "text_chars": "",
+    "text_sha256": "",
+    "error": "",
+    "sample": ""
+  },
+  {
+    "source_id": "SRC-075",
+    "path": "tests/test_monitor_bank_sources.py",
+    "filename": "test_monitor_bank_sources.py",
+    "extension": ".py",
+    "size_bytes": 2743,
+    "sha256": "b79d30671fa7d282fb003338ed5f346d9728b277ab5b55553c70fa34f7e58b00",
     "suspected_duplicate": false,
     "duplicate_basis": "",
     "bank_mapping": "Unmapped / multi-bank",

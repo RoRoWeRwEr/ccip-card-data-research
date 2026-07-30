@@ -57,3 +57,12 @@ Created repeatable consolidation, validation, and comparison scripts. Generated 
 - Added reusable bank-validation and new-source-ingestion workflows under `docs/prompts/`.
 - Extended automated output validation to require the operating-system files and the core `PROJECT_STATE.md` keys.
 - PR #2 squash-merged to `main` as `36dbefebb2cb4208062ad7c73f1df3630b043be9`; post-merge state finalized with Riyad Bank as the next action.
+
+## Continuous bank-card monitoring (2026-07-30)
+
+- Added a central registry for all 19 issuers represented in the Saudi payment-card dataset, including official home URLs and expansion status.
+- Activated Riyad Bank first with five official sources: card catalog, card-fee disclosure, card terms, rewards page, and rewards terms.
+- Added scheduled GitHub Actions for twice-weekly monitoring, machine-readable change history, automated tracking Issue/Draft PR updates, and change-only full-validation dispatch.
+- Detects new, changed, removed, renamed, inaccessible, and restored sources using HTTP metadata, redirects, raw/content hashes, normalized HTML, and similarity comparison.
+- Established a live baseline with all five Riyad sources accessible. A baseline does not alert and monitoring never writes the authoritative or consolidated workbook.
+- Added role documentation, four focused unit tests, and repository validation safeguards that reject monitoring workflows invoking workbook writers.

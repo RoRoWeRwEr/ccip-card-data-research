@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scope": "Saudi payment-card issuers represented in the research dataset",
+  "institutions": [
+    {"id": "al-rajhi", "name": "Al Rajhi Bank", "type": "bank", "official_url": "https://www.alrajhibank.com.sa/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "alinma", "name": "Alinma Bank", "type": "bank", "official_url": "https://www.alinma.com/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "alinma-pay", "name": "Alinma Pay", "type": "wallet", "official_url": "https://www.alinmapay.com/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "amex-saudi", "name": "American Express Saudi Arabia", "type": "card_issuer", "official_url": "https://www.americanexpress.com.sa/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "anb", "name": "Arab National Bank", "type": "bank", "official_url": "https://anb.com.sa/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "bank-albilad", "name": "Bank Albilad", "type": "bank", "official_url": "https://www.bankalbilad.com/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "bank-aljazira", "name": "Bank Aljazira", "type": "bank", "official_url": "https://www.baj.com.sa/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "bsf", "name": "Banque Saudi Fransi", "type": "bank", "official_url": "https://bsf.sa/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "barq", "name": "Barq", "type": "wallet", "official_url": "https://barq.com/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "d360", "name": "D360 Bank", "type": "digital_bank", "official_url": "https://d360.com/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "emirates-nbd-ksa", "name": "Emirates NBD KSA", "type": "foreign_bank_branch", "official_url": "https://www.emiratesnbd.com.sa/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "gib-meem", "name": "Gulf International Bank Saudi Arabia (meem)", "type": "bank", "official_url": "https://meem.com.sa/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "mobily-pay", "name": "Mobily Pay", "type": "wallet", "official_url": "https://mobilypay.sa/", "monitoring_status": "registry_only", "sources": []},
+    {
+      "id": "riyad-bank",
+      "name": "Riyad Bank",
+      "type": "bank",
+      "official_url": "https://www.riyadbank.com/",
+      "monitoring_status": "active",
+      "sources": [
+        {"id": "riyad-credit-cards", "kind": "card_catalog", "label": "Credit Cards", "url": "https://www.riyadbank.com/en/personal-banking/credit-cards", "material": true},
+        {"id": "riyad-card-fees", "kind": "pricing_guide", "label": "Credit Cards Fees", "url": "https://www.riyadbank.com/documents/20121/5505375/Fees_%26_Charges.pdf/44245563-bac7-a305-ff69-02bca017592d?t=1725264291563", "material": true},
+        {"id": "riyad-card-terms", "kind": "terms_and_conditions", "label": "Credit Card Terms and Conditions", "url": "https://www.riyadbank.com/documents/20121/0/Unified%2BFrom.pdf/61354960-5cf9-2dae-b5c9-18d2b0c7fdaf?t=1758182233335", "material": true},
+        {"id": "riyad-hassad", "kind": "rewards_page", "label": "Hassad Rewards Program", "url": "https://www.riyadbank.com/en/personal-banking/hassad-rewards-program", "material": true},
+        {"id": "riyad-hassad-terms", "kind": "rewards_terms", "label": "Hassad Rewards Terms", "url": "https://www.riyadbank.com/documents/20121/6631715/Hasad-TC.pdf", "material": true}
+      ]
+    },
+    {"id": "stc-bank", "name": "STC Bank", "type": "digital_bank", "official_url": "https://stcbank.com.sa/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "sab", "name": "Saudi Awwal Bank", "type": "bank", "official_url": "https://www.sab.com/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "saib", "name": "Saudi Investment Bank", "type": "bank", "official_url": "https://www.saib.com.sa/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "snb", "name": "Saudi National Bank", "type": "bank", "official_url": "https://www.alahli.com/", "monitoring_status": "registry_only", "sources": []},
+    {"id": "tiqmo", "name": "TIQMO", "type": "wallet", "official_url": "https://tiqmo.com/", "monitoring_status": "registry_only", "sources": []}
+  ]
+}
