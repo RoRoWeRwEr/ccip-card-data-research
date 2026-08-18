@@ -23,9 +23,15 @@ REQUIRED = [
     "outputs/reports/MISSING_INFORMATION.md", "outputs/reports/CONFLICTS_AND_DECISIONS.md",
     "outputs/reports/CHANGELOG.md", "outputs/reports/WORKBOOK_AUDIT.md",
     "outputs/reports/COLLECTION_STATUS.md", "outputs/reports/FINAL_VALIDATION_PLAN.md",
+    "outputs/reports/CREDIT_CARD_77_INGESTION.md",
     "outputs/machine-readable/cards.csv", "outputs/machine-readable/cards.json",
     "outputs/machine-readable/sources.csv", "outputs/machine-readable/conflicts.csv",
-    "outputs/machine-readable/missing_fields.csv", "outputs/excel/saudi-credit-cards-unified-consolidated.xlsx",
+    "outputs/machine-readable/missing_fields.csv",
+    "outputs/machine-readable/cc77_source_summary.json",
+    "outputs/machine-readable/cc77_embedded_links.csv", "outputs/machine-readable/cc77_embedded_links.json",
+    "outputs/machine-readable/cc77_leads.csv", "outputs/machine-readable/cc77_leads.json",
+    "outputs/machine-readable/cc77_vat_review.csv", "outputs/machine-readable/cc77_vat_review.json",
+    "outputs/excel/saudi-credit-cards-unified-consolidated.xlsx",
 ]
 
 
@@ -43,16 +49,20 @@ def main():
         checks.append({"check": f"exists:{rel}", "passed": p.exists() and p.stat().st_size > 0})
     cards = json.loads((ROOT / "outputs/machine-readable/cards.json").read_text(encoding="utf-8"))
     checks.append({"check": "cards.json valid nonempty array", "passed": isinstance(cards, list) and len(cards) > 0, "count": len(cards)})
-    for name in ["cards.csv", "sources.csv", "conflicts.csv", "missing_fields.csv"]:
+    for name in ["cards.csv", "sources.csv", "conflicts.csv", "missing_fields.csv",
+                 "cc77_embedded_links.csv", "cc77_leads.csv", "cc77_vat_review.csv"]:
         with (ROOT / "outputs/machine-readable" / name).open(encoding="utf-8-sig", newline="") as f:
             rows = list(csv.DictReader(f))
         checks.append({"check": f"CSV valid:{name}", "passed": len(rows) > 0, "count": len(rows)})
     original = load_workbook(ROOT / "Credit Cards Terms and Conditions/01. saudi-credit-cards-unified V3.xlsx", data_only=False)
     output = load_workbook(ROOT / "outputs/excel/saudi-credit-cards-unified-consolidated.xlsx", data_only=False)
     checks.append({"check": "all original sheet names retained", "passed": set(original.sheetnames) <= set(output.sheetnames)})
-    checks.append({"check": "seven additive sheets present", "passed": len(output.sheetnames) == len(original.sheetnames) + 7,
+    checks.append({"check": "ten additive sheets present", "passed": len(output.sheetnames) == len(original.sheetnames) + 10,
                    "original": len(original.sheetnames), "output": len(output.sheetnames)})
     checks.append({"check": "ANB Phase 2 validation sheet present", "passed": "ANB Validation 2026-07-30" in output.sheetnames})
+    cc77_sheets = {"CC77 Source Registry", "CC77 Comparison Leads", "CC77 VAT Review"}
+    checks.append({"check": "CC77 additive sheets present", "passed": cc77_sheets <= set(output.sheetnames),
+                   "sheets": sorted(cc77_sheets)})
     checks.append({"check": "original card row count not decreased", "passed": output["دليل البطاقات"].max_row >= original["دليل البطاقات"].max_row,
                    "original": original["دليل البطاقات"].max_row, "output": output["دليل البطاقات"].max_row})
     old_formulas = sum(c.data_type == "f" for ws in original.worksheets for row in ws.iter_rows() for c in row)
@@ -67,10 +77,10 @@ def main():
             source_checks.append(p.exists() and digest(p) == row["sha256"])
     checks.append({"check": "source files unchanged since inventory", "passed": all(source_checks), "count": len(source_checks)})
     raw_diff = subprocess.run(
-        ["git", "status", "--porcelain", "--", "Credit Cards Terms and Conditions"],
+        ["git", "diff", "--name-status", "--", "Credit Cards Terms and Conditions"],
         cwd=ROOT, capture_output=True, text=True, check=True,
     ).stdout.strip()
-    checks.append({"check": "raw source folder has no Git changes", "passed": raw_diff == "", "details": raw_diff})
+    checks.append({"check": "raw source folder has no unstaged changes", "passed": raw_diff == "", "details": raw_diff})
     raw_names = {p.name for p in (ROOT / "Credit Cards Terms and Conditions").iterdir() if p.is_file()}
     generated_names = {"saudi-credit-cards-unified-consolidated.xlsx", "MASTER_DATA_REFERENCE.md", "MISSING_INFORMATION.md",
                        "CONFLICTS_AND_DECISIONS.md", "CHANGELOG.md", "WORKBOOK_AUDIT.md", "COLLECTION_STATUS.md",

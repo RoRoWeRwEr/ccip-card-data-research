@@ -1,6 +1,6 @@
 # Consolidated Master Data Reference
 
-Generated: 2026-07-30. This is the continuation document for the Saudi payment-card working dataset.
+Generated: 2026-08-18. This is the continuation document for the Saudi payment-card working dataset.
 
 ## Purpose and scope boundary
 
@@ -16,6 +16,7 @@ The deliverable consolidates inherited workbook records, the prior Claude refere
 - Conflicts preserved: 146 (48 inherited workbook entries; 98 field-level differences detected during exact-ID reconciliation).
 - Missing-field backlog rows: 74.
 - Consolidated workbook: `outputs/excel/saudi-credit-cards-unified-consolidated.xlsx`.
+- CC77 secondary-source staging: 13 embedded-link records, 13 comparison leads, and 5 VAT-review records; master additions/overwrites/deletions: **0/0/0**.
 
 ## Sources and authority
 
@@ -23,7 +24,7 @@ See `docs/REPOSITORY_INVENTORY.md` for hashes, sizes, extractability, and bank m
 
 ## Workbook structure
 
-All original sheets remain. Six additive sheets were created: Chrome card guide, Chrome detail staging, reconciliation, source registry, missing fields, and decisions/conflicts. Original formulas, formatting objects, tables, filters, comments, hyperlinks, validations, merged cells, hidden states, and frozen panes are compared during validation.
+All original sheets remain. Ten additive sheets exist: the six consolidation sheets, the ANB Phase 2 validation sheet, and three CC77 staging/provenance sheets (`CC77 Source Registry`, `CC77 Comparison Leads`, and `CC77 VAT Review`). Original formulas, formatting objects, tables, filters, comments, hyperlinks, validations, merged cells, hidden states, and frozen panes are compared during validation.
 
 ## Banks
 
@@ -40,6 +41,7 @@ Al Rajhi Bank, Alinma Bank, Alinma Pay, American Express Saudi Arabia, Arab Nati
 - Exact IDs link evidence; only blank fields are candidates for safe enrichment. Populated differences become conflict rows.
 - Mismatched namespaces are not force-mapped. The 98 unmatched Chrome records remain source records with `unresolved_identity_do_not_merge` in machine exports.
 - No card, historical record, or source file was deleted. No populated master value was silently overwritten.
+- `Credit Card 77_260818_125243.pdf` is authority-rank-9 secondary evidence. Tweeq and urpay remain unmerged candidates; the PDF's apparent VAT-inclusive values remain hypotheses until matched to applicable official disclosures.
 
 ## Completed work
 
@@ -49,6 +51,7 @@ Al Rajhi Bank, Alinma Bank, Alinma Pay, American Express Saudi Arabia, Arab Nati
 - Created additive reconciliation and provenance layers.
 - Generated missing-data, conflict, collection-status, audit, change, and final-validation reports.
 - Generated CSV/JSON exports without flattening or replacing the original workbook structure.
+- Preserved CC77 unchanged, classified its 13 supporting links, researched Tweeq and urpay against official terms, and published additive provenance, comparison-lead, and VAT-review records.
 
 ## Partially completed and outstanding work
 
@@ -57,6 +60,7 @@ Al Rajhi Bank, Alinma Bank, Alinma Pay, American Express Saudi Arabia, Arab Nati
 - Image-only or layout-dependent PDF tables require visual/OCR review where extraction is weak.
 - Product availability, fees, APR, rewards, limits, eligibility, and benefits still require final current-source validation.
 - Machine exports preserve rich text values; they do not decompose every narrative fee/benefit into atomic database fields.
+- Tweeq and urpay require separate identity-validation cycles before any issuer/card IDs or master records are introduced.
 
 ## Instructions for the next agent
 
@@ -149,35 +153,3 @@ Follow `outputs/reports/FINAL_VALIDATION_PLAN.md`. The next recommended action i
 - `claude/index-update-manifest-2026-07-28.md` و`claude/unified-workbook-build-2026-07-28.md`: سجل بناء الإكسل حتى 2026-07-28 (تاريخي، لا حاجة لإعادة قراءته بعد هذا الملف).
 - `claude/BICC-CURRENT-STATE.md`: **مسار منفصل تمامًا (GitHub/index.html) — لا علاقة له بهذا المسار، لا تخلط بينهما.**
 - `claude/chrome-prompt-earning-rates-collection.md`: مسودة برومبت Chrome سابقة — يُراجَع/يُحدَّث بالخطوة القادمة (قسم 6).
-
-## 8) Phase 2 — دورة التحقق الرسمية الأولى: البنك العربي الوطني (ANB)
-
-تاريخ التحقق: **2026-07-30**. اختير ANB لأنه يجمع أكبر أولوية موثقة في الملف مع حجم بيانات مرتفع: 19 صفًا موروثًا في الدليل و24 منتجًا قابلًا للتعريف في بحث Chrome V4، إضافة إلى أكبر مجموعة تعارضات هوية/رسوم متقاربة.
-
-### نطاق المراجعة المنفذ
-
-- روجعت المنتجات الـ24 واحدًا واحدًا مقابل صفحات ANB الرسمية المتاحة.
-- روجعت تعرفة التجزئة النافذة من **18 فبراير 2026**، وشروط البطاقات الائتمانية العامة، وشروط الفرسان، وشروط مدى، وشروط بطاقة العملات، وشروط بطاقات الشركات.
-- روجع جدول اكتساب النقاط الرسمي ونسختاه المتعارضتان، وشروط برنامج `anb rewards` المنشورة حاليًا.
-- أضيفت ورقة `ANB Validation 2026-07-30` إلى المصنف الموحَّد. الورقة سجل تدقيق إضافي، ولا تستبدل الصفوف التاريخية ولا تحسم وصلات الهوية المتعارضة.
-
-### النتيجة
-
-- **24/24 منتجًا** له صف تحقق مستقل.
-- **22/24** أمكن تأكيد وجودها الحالي مباشرة بصفحة منتج/مقارنة/تعرفة أو مادة حالية محددة؛ World Elite Select وVisa Classic فقط يفتقدان صفحة منتج/حالة مستقلة.
-- **10/24** ما زال لديها حقل مصدر مفقود واحد على الأقل (تسعير خاص، شبكة، مكافآت، أو صياغة حالة)، كما هو مفصل صفًا بصف في ورقة التحقق وتقرير المعلومات المفقودة.
-- لم تُحذف أي بطاقة ولم يُستبدل أي حقل موروث. ظل تعارض معرّفات ANB-01 إلى ANB-19 محفوظًا لأن الـIDs الموروثة تربط أسماء تاريخية مختلفة بأسماء بحث V4.
-- التعرفة العامة تقول **2%** للعمليات الدولية، بينما صفحات المنتجات الفردية تعرض **2.75%** لعدة بطاقات؛ القيمتان رسميتان ومحفوظتان كتعارض مفتوح.
-- نسختا جدول الولاء تعرضان **1.8 مقابل 2.2 نقطة/ريال دولي** لبطاقتي Visa Infinite Privilege وMastercard World Elite Exclusive؛ لم يُحسم الفرق زمنيًا بصورة دفاعية.
-
-### المستندات المطلوبة لإغلاق دورة ANB
-
-الدورة **غير جاهزة لوصف “تحقق نهائي كامل”** حتى يوفر ANB أو المستخدم ما يلي:
-
-1. إفصاح منتج/تسعير ومعدل مكافآت حالي خاص بـ **Mastercard World Elite Select**.
-2. تأكيد منتج/تسعير حالي خاص بـ **Mastercard World Elite Exclusive** يربط صراحة رسم SAR 3,000 بالنسخة Exclusive، لا بفئة World Elite العامة فقط.
-3. جدول رسوم خاص بمستويات **Mada Infinite / Platinum / Gold / Classic** مع بيان الشبكة المشتركة إن وجدت، وصياغة لا لبس فيها لمقام اكتساب 250 نقطة.
-4. جدول تسعير ورسوم وتطبيق مكافآت حالي لبطاقات **Corporate / Business / Purchase**.
-5. صفحة منتج حالية مستقلة أو إشعار حالة لـ **Visa Classic**.
-
-هذه فجوات مصدرية وليست طلبًا لحذف المنتجات. عند وصول أي منها، يبدأ الوكيل التالي من ورقة التحقق ويحدّث الصفوف المتأثرة فقط.

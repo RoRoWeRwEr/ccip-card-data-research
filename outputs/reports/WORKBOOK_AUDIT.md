@@ -1,6 +1,6 @@
 # Workbook Audit
 
-Generated: 2026-07-30.
+Generated: 2026-08-18.
 
 ## Structure
 
@@ -37,6 +37,7 @@ Generated: 2026-07-30.
 - Narrative fee, APR, bonus, and benefit fields contain mixed units and composite values. Machine exports preserve them as text to avoid lossy parsing.
 - The original master has one Excel table and no named ranges. Generated sheets use filters and frozen headers.
 - No original row, column, sheet, formula, comment, hyperlink, validation, merge, or hidden state is intentionally removed.
+- The published workbook contains 21 sheets: 11 protected originals plus 10 additive sheets. CC77 contributes only three staging/provenance sheets and zero master-row changes.
 
 ## Duplicate-name candidates
 

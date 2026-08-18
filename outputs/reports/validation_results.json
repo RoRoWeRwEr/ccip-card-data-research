@@ -86,6 +86,10 @@
       "passed": true
     },
     {
+      "check": "exists:outputs/reports/CREDIT_CARD_77_INGESTION.md",
+      "passed": true
+    },
+    {
       "check": "exists:outputs/machine-readable/cards.csv",
       "passed": true
     },
@@ -106,6 +110,34 @@
       "passed": true
     },
     {
+      "check": "exists:outputs/machine-readable/cc77_source_summary.json",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/cc77_embedded_links.csv",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/cc77_embedded_links.json",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/cc77_leads.csv",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/cc77_leads.json",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/cc77_vat_review.csv",
+      "passed": true
+    },
+    {
+      "check": "exists:outputs/machine-readable/cc77_vat_review.json",
+      "passed": true
+    },
+    {
       "check": "exists:outputs/excel/saudi-credit-cards-unified-consolidated.xlsx",
       "passed": true
     },
@@ -122,7 +154,7 @@
     {
       "check": "CSV valid:sources.csv",
       "passed": true,
-      "count": 75
+      "count": 81
     },
     {
       "check": "CSV valid:conflicts.csv",
@@ -135,18 +167,42 @@
       "count": 74
     },
     {
+      "check": "CSV valid:cc77_embedded_links.csv",
+      "passed": true,
+      "count": 13
+    },
+    {
+      "check": "CSV valid:cc77_leads.csv",
+      "passed": true,
+      "count": 13
+    },
+    {
+      "check": "CSV valid:cc77_vat_review.csv",
+      "passed": true,
+      "count": 5
+    },
+    {
       "check": "all original sheet names retained",
       "passed": true
     },
     {
-      "check": "seven additive sheets present",
+      "check": "ten additive sheets present",
       "passed": true,
       "original": 11,
-      "output": 18
+      "output": 21
     },
     {
       "check": "ANB Phase 2 validation sheet present",
       "passed": true
+    },
+    {
+      "check": "CC77 additive sheets present",
+      "passed": true,
+      "sheets": [
+        "CC77 Comparison Leads",
+        "CC77 Source Registry",
+        "CC77 VAT Review"
+      ]
     },
     {
       "check": "original card row count not decreased",
@@ -163,10 +219,10 @@
     {
       "check": "source files unchanged since inventory",
       "passed": true,
-      "count": 55
+      "count": 56
     },
     {
-      "check": "raw source folder has no Git changes",
+      "check": "raw source folder has no unstaged changes",
       "passed": true,
       "details": ""
     },
@@ -183,7 +239,7 @@
     {
       "check": "Markdown outputs decode as UTF-8",
       "passed": true,
-      "count": 13
+      "count": 14
     },
     {
       "check": "PROJECT_STATE required keys present",

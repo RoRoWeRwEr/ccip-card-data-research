@@ -1,0 +1,145 @@
+[
+  {
+    "lead_id": "CC77-L001",
+    "entity": "Tweeq",
+    "candidate_product": "Tweeq mada Card",
+    "lead_type": "new_entity_and_product_candidate",
+    "pdf_evidence": "Digital banks and wallets comparison",
+    "official_evidence": "Official terms list mada card: issuance SAR 0, annual SAR 0, replacement SAR 10, delivery SAR 10, international transaction fee 2%, all excluding VAT.",
+    "official_url": "https://tweeq.sa/en/payment-cards-terms-conditions",
+    "status": "official_candidate_unmerged",
+    "recommended_action": "Create a separate identity-validation task; do not add to master until scope, licensing identity, network/co-badge, and current availability are confirmed."
+  },
+  {
+    "lead_id": "CC77-L002",
+    "entity": "urpay / neoleap",
+    "candidate_product": "urpay card portfolio",
+    "lead_type": "new_entity_candidate",
+    "pdf_evidence": "Digital banks and wallets comparison",
+    "official_evidence": "Official card terms confirm prepaid cards directly debiting the SAR wallet and identify multiple card products.",
+    "official_url": "https://www.urpay.com.sa/en/cards-terms-conditions",
+    "status": "official_candidate_unmerged",
+    "recommended_action": "Validate legal entity, licensing name, and whether CCIP treats urpay as a separate issuer/entity before adding products."
+  },
+  {
+    "lead_id": "CC77-L003",
+    "entity": "urpay / neoleap",
+    "candidate_product": "urpay Mada Card",
+    "lead_type": "new_product_candidate",
+    "pdf_evidence": "Digital banks and wallets comparison",
+    "official_evidence": "Virtual issuance free; annual fee free; supplementary SAR 30; physical printing SAR 30.",
+    "official_url": "https://www.urpay.com.sa/en/cards-terms-conditions",
+    "status": "official_candidate_unmerged",
+    "recommended_action": "Validate current application availability and identity before assigning a card_id."
+  },
+  {
+    "lead_id": "CC77-L004",
+    "entity": "urpay / neoleap",
+    "candidate_product": "urpay Visa Platinum Card",
+    "lead_type": "new_product_candidate",
+    "pdf_evidence": "Digital banks and wallets comparison",
+    "official_evidence": "Virtual issuance free; annual fee free; supplementary SAR 30; physical printing SAR 30.",
+    "official_url": "https://www.urpay.com.sa/en/cards-terms-conditions",
+    "status": "official_candidate_unmerged",
+    "recommended_action": "Validate current application availability and card-level cashback rules before assigning a card_id."
+  },
+  {
+    "lead_id": "CC77-L005",
+    "entity": "urpay / neoleap",
+    "candidate_product": "urpay Platinum Visitor Card",
+    "lead_type": "new_product_candidate",
+    "pdf_evidence": "Not separately identifiable in CC77 table",
+    "official_evidence": "Official terms list virtual issuance and annual fee as free; supplementary and physical printing are N/A.",
+    "official_url": "https://www.urpay.com.sa/en/cards-terms-conditions",
+    "status": "official_candidate_unmerged",
+    "recommended_action": "Confirm eligibility and whether the product remains actively issued."
+  },
+  {
+    "lead_id": "CC77-L006",
+    "entity": "urpay / neoleap",
+    "candidate_product": "urpay Alahli Club Card",
+    "lead_type": "new_product_candidate",
+    "pdf_evidence": "Not separately identifiable in CC77 table",
+    "official_evidence": "Official terms list SAR 30 virtual issuance, annual, and supplementary fees; SAR 70 physical printing.",
+    "official_url": "https://www.urpay.com.sa/en/cards-terms-conditions",
+    "status": "official_candidate_unmerged",
+    "recommended_action": "Confirm current availability and co-brand identity before assigning a card_id."
+  },
+  {
+    "lead_id": "CC77-L007",
+    "entity": "urpay / neoleap",
+    "candidate_product": "urpay Visa Signature Card",
+    "lead_type": "new_product_candidate",
+    "pdf_evidence": "Digital banks and wallets comparison",
+    "official_evidence": "SAR 300 virtual issuance, annual, and supplementary fees; SAR 30 physical printing; cashback 1.2% local and 1.5% international; exclusions listed in official terms.",
+    "official_url": "https://www.urpay.com.sa/en/cards-terms-conditions",
+    "status": "official_candidate_unmerged",
+    "recommended_action": "Validate current availability and normalize cashback exclusions before assigning a card_id."
+  },
+  {
+    "lead_id": "CC77-L008",
+    "entity": "Multi-bank",
+    "candidate_product": "Statement and due-date fields",
+    "lead_type": "schema_enrichment_candidate",
+    "pdf_evidence": "Visa, Mastercard, cashback, Alfursan and travel tables",
+    "official_evidence": "Not validated bank-by-bank in this task.",
+    "official_url": "",
+    "status": "secondary_lead_only",
+    "recommended_action": "Add atomic statement_date_basis and payment_due_date_basis fields only after official verification."
+  },
+  {
+    "lead_id": "CC77-L009",
+    "entity": "Multi-bank",
+    "candidate_product": "Fee-waiver conditions",
+    "lead_type": "schema_enrichment_candidate",
+    "pdf_evidence": "Annual fee and spend-waiver rows",
+    "official_evidence": "Not validated bank-by-bank in this task.",
+    "official_url": "",
+    "status": "secondary_lead_only",
+    "recommended_action": "Separate standard fee, promotional fee, first-year fee, renewal fee, VAT basis, waiver threshold, and customer segment."
+  },
+  {
+    "lead_id": "CC77-L010",
+    "entity": "Multi-bank",
+    "candidate_product": "Rewards valuation assumptions",
+    "lead_type": "calculation_model_candidate",
+    "pdf_evidence": "Points-value and example-spend sections",
+    "official_evidence": "PDF states flight values are approximate and vary by destination and price.",
+    "official_url": "",
+    "status": "secondary_lead_only",
+    "recommended_action": "Keep redemption values time-stamped, channel-specific, and separate from direct earning rates."
+  },
+  {
+    "lead_id": "CC77-L011",
+    "entity": "Multi-bank",
+    "candidate_product": "Reward exclusions",
+    "lead_type": "missing_data_and_conflict_lead",
+    "pdf_evidence": "13 linked exclusion summaries",
+    "official_evidence": "Linked PDFs are social-account summaries created in Apple Numbers, not official bank documents.",
+    "official_url": "",
+    "status": "secondary_lead_only",
+    "recommended_action": "Use each summary only to locate an official rewards clause; never confirm an exclusion from the linked file alone."
+  },
+  {
+    "lead_id": "CC77-L012",
+    "entity": "Multi-bank",
+    "candidate_product": "Airport lounge and travel insurance fields",
+    "lead_type": "schema_enrichment_candidate",
+    "pdf_evidence": "Network comparison tables",
+    "official_evidence": "Not validated bank-by-bank in this task.",
+    "official_url": "",
+    "status": "secondary_lead_only",
+    "recommended_action": "Normalize provider, eligibility, visit allowance, guest rules, spend condition, and effective period after official confirmation."
+  },
+  {
+    "lead_id": "CC77-L013",
+    "entity": "Multi-bank",
+    "candidate_product": "Welcome, milestone, quarterly and annual bonuses",
+    "lead_type": "schema_enrichment_candidate",
+    "pdf_evidence": "Alfursan comparison table",
+    "official_evidence": "Not validated bank-by-bank in this task.",
+    "official_url": "",
+    "status": "secondary_lead_only",
+    "recommended_action": "Store each bonus as a separate event with spend threshold, window, recurrence, cap, and source date."
+  }
+]
