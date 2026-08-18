@@ -21,7 +21,7 @@ monitoring:
   validation_trigger: "Only a detected material source change dispatches full bank validation."
   active_change_issue: "https://github.com/RoRoWeRwEr/ccip-card-data-research/issues/7"
   validation_dispatch_run: "https://github.com/RoRoWeRwEr/ccip-card-data-research/actions/runs/30529341372"
-open_pull_requests: ["pending: codex/ingest-credit-card-77"]
+open_pull_requests: ["https://github.com/RoRoWeRwEr/ccip-card-data-research/pull/10"]
 pending_user_decisions:
   - "Approval required before any irreversible ANB-01 to ANB-19 identifier remap or record merge."
   - "Selection required only if one international-fee value must be forced before ANB resolves 2% tariff versus 2.75% product-page evidence."
@@ -38,7 +38,7 @@ outstanding_conflicts:
   - "ANB inherited identifiers ANB-01 to ANB-19 map to different historical and Chrome V4 product names."
 exact_next_recommended_action: "Open a new task to validate Tweeq and urpay identities and current product availability against dated official sources before assigning any issuer/card IDs; keep Riyad Bank Issue #7 active as the existing monitoring follow-up."
 last_updated_date: 2026-08-18
-last_updated_commit: pending-cc77-ingestion-merge
+last_updated_commit: e16bcbf319a64be69fe358f1e77e27352747ba30
 ---
 
 # Project State
