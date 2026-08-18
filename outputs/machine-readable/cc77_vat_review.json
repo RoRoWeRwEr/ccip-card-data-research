@@ -1,0 +1,47 @@
+[
+  {
+    "review_id": "CC77-VAT-001",
+    "scope": "Generic international fee",
+    "source_value": "2.30% shown in CC77",
+    "comparison_value": "2.00% excluding VAT",
+    "calculation": "2.00% x 1.15 = 2.30%",
+    "classification": "plausible_vat_normalization",
+    "decision": "Use as a reconciliation hypothesis only; confirm whether VAT legally applies to the exact fee and how the official source quotes it."
+  },
+  {
+    "review_id": "CC77-VAT-002",
+    "scope": "Tweeq international fee",
+    "source_value": "CC77 comparison context uses VAT-inclusive figures",
+    "comparison_value": "Official Tweeq terms: 2.00% excluding VAT",
+    "calculation": "2.00% x 1.15 = 2.30%",
+    "classification": "official_basis_supports_hypothesis",
+    "decision": "Stage 2.00% exclusive and 2.30% mathematical inclusive equivalent separately; do not overwrite any card value."
+  },
+  {
+    "review_id": "CC77-VAT-003",
+    "scope": "urpay Visa international fee",
+    "source_value": "CC77 digital-wallet table is visually ambiguous",
+    "comparison_value": "Official urpay terms: 2.20% excluding VAT",
+    "calculation": "2.20% x 1.15 = 2.53%",
+    "classification": "potential_conflict_requires_validation",
+    "decision": "Use the official terms as the current lead; keep the PDF value unparsed until card-column alignment is manually validated."
+  },
+  {
+    "review_id": "CC77-VAT-004",
+    "scope": "ANB international fee conflict",
+    "source_value": "CC77 commonly shows 2.30%",
+    "comparison_value": "ANB tariff 2.00% versus product pages 2.75%",
+    "calculation": "2.00% x 1.15 = 2.30%; this does not reconcile 2.75%",
+    "classification": "conflict_not_resolved",
+    "decision": "Preserve the existing official 2.00%/2.75% conflict. CC77 supports only a possible VAT interpretation of the tariff value."
+  },
+  {
+    "review_id": "CC77-VAT-005",
+    "scope": "Annual fee normalization examples",
+    "source_value": "CC77 includes 230, 345, 517.50, 862.50, 1,035 and 1,150 SAR",
+    "comparison_value": "Possible pre-VAT bases: 200, 300, 450, 750, 900 and 1,000 SAR",
+    "calculation": "base x 1.15 = displayed amount",
+    "classification": "pattern_only_not_card_evidence",
+    "decision": "Add explicit fee_vat_basis to future schema; never reverse-calculate a card fee without an official fee source."
+  }
+]

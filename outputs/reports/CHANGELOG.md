@@ -1,20 +1,20 @@
 # Changelog
 
-Generated: 2026-07-30.
+Generated: 2026-08-18.
 
 ## Inspected
 
-- Repository source files: 55.
-- Markdown files read: 7.
+- Repository source files: 56.
+- Markdown files read: 11.
 - Excel workbooks: 1; worksheets audited: 11.
-- PDFs: 44; DOCX: 5; RTF: 1.
+- PDFs: 45; DOCX: 5; RTF: 1.
 
 ## Data changes
 
 - Original master rows retained: 196; original row deletions: **0**.
 - Original sheets retained: 11; original sheet deletions: **0**.
 - Original populated values overwritten: **0**.
-- Additive workbook sheets: **6**.
+- Additive workbook sheets: **10** (six consolidation, one ANB validation, and three CC77 staging/provenance sheets).
 - Chrome V4 guide records staged: 165; structured detail rows staged: 443.
 - Exact-ID evidence links: 67.
 - Unmatched/new-ID records preserved separately: 98.
@@ -31,6 +31,14 @@ All original sheets, rows, cell values, formatting, formulas, comments, hyperlin
 
 Created repeatable consolidation, validation, and comparison scripts. Generated the consolidated workbook, five machine-readable exports, repository inventory, master reference, audit, missing-data, conflict, collection-status, changelog, and final-validation plan.
 
+## Credit Card comparison version 77 ingestion — 2026-08-18
+
+- Preserved `Credit Card 77_260818_125243.pdf` unchanged at SHA-256 `8a51c97b8e1b3235f5799e05e41826d7ee7c420d1ef896af40691c4293f22902` and classified it as secondary/unverified evidence.
+- Added three workbook sheets only: `CC77 Source Registry`, `CC77 Comparison Leads`, and `CC77 VAT Review`.
+- Registered 13 embedded supporting links, 13 comparison leads, and 5 VAT-review records in new CSV/JSON outputs.
+- Investigated Tweeq and urpay using current official terms; retained them as unmerged candidates with no new card IDs.
+- Preserved the 146 existing conflict rows. No pre-existing card value, row, sheet, or identifier was changed, removed, or merged.
+
 ## Pre-merge release review
 
 - Added the permanent repository separation, source-ingestion, and GitHub lifecycle policy to `AGENTS.md`.
@@ -38,31 +46,3 @@ Created repeatable consolidation, validation, and comparison scripts. Generated 
 - Added Git-backed raw-source preservation, generated-file placement, XLSX ZIP integrity, and Markdown UTF-8 checks.
 - Added `scripts/check_reproducibility.py`; two independent rebuilds produced identical deterministic reports/exports and identical workbook semantics.
 - Normalized generated CSV line endings to LF so repository diffs are stable across environments.
-
-## Phase 2 — ANB official-source validation (2026-07-30)
-
-- Selected one bank only: Arab National Bank (ANB), based on documented priority and 24 identifiable products.
-- Reviewed 24/24 products against available official product pages, the retail tariff effective 2026-02-18, applicable card terms, and official reward materials.
-- Added one workbook sheet, `ANB Validation 2026-07-30`, containing 24 traceable validation rows and 15 fields per row.
-- Existing workbook sheets deleted: **0**; existing master rows deleted: **0**; populated master values overwritten: **0**.
-- Added 10 Phase 2 missing-evidence observations and 5 consolidated conflict/decision entries.
-- Added `scripts/validate_anb_phase2.py` to recreate the additive validation register without modifying raw sources.
-- Raw source files added, changed, moved, or deleted: **0**.
-- ANB cycle status: **partially validated; blocked from final-complete status by five grouped official-document gaps** listed in `MASTER_DATA_REFERENCE.md`.
-
-## Permanent autonomous repository operating system (2026-07-30)
-
-- Expanded `AGENTS.md` with mandatory repository/bootstrap checks, ordered state-file reading, autonomous interaction rules, and permanent short-input routing.
-- Added `PROJECT_STATE.md` with structured current phase, PR, bank, conflict, missing-source, decision, and next-action state.
-- Added reusable bank-validation and new-source-ingestion workflows under `docs/prompts/`.
-- Extended automated output validation to require the operating-system files and the core `PROJECT_STATE.md` keys.
-- PR #2 squash-merged to `main` as `36dbefebb2cb4208062ad7c73f1df3630b043be9`; post-merge state finalized with Riyad Bank as the next action.
-
-## Continuous bank-card monitoring (2026-07-30)
-
-- Added a central registry for all 19 issuers represented in the Saudi payment-card dataset, including official home URLs and expansion status.
-- Activated Riyad Bank first with five official sources: card catalog, card-fee disclosure, card terms, rewards page, and rewards terms.
-- Added scheduled GitHub Actions for twice-weekly monitoring, machine-readable change history, automated tracking Issue/Draft PR updates, and change-only full-validation dispatch.
-- Detects new, changed, removed, renamed, inaccessible, and restored sources using HTTP metadata, redirects, raw/content hashes, normalized HTML, and similarity comparison.
-- Established a live baseline with all five Riyad sources accessible. A baseline does not alert and monitoring never writes the authoritative or consolidated workbook.
-- Added role documentation, four focused unit tests, and repository validation safeguards that reject monitoring workflows invoking workbook writers.

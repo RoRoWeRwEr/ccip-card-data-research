@@ -12,3 +12,5 @@ This consolidation is not final verification. Execute the next phase bank-by-ban
 8. Rebuild and validate all outputs; reconcile row counts and require deletion count zero.
 
 Recommended order: unresolved namespace mapping; high-priority fee/APR conflicts; cards with missing source or product type; remaining estimated/unavailable records; then full current-product sweep.
+
+CC77 follow-up: run separate Tweeq and urpay identity-validation cycles before adding either to the master. Treat the remaining CC77 fields and 13 linked exclusion summaries only as search leads for current official tariffs, product pages, terms, and rewards documents. Validate VAT applicability at the fee level; do not convert a published amount merely because a 15% pattern appears plausible.

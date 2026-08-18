@@ -15,6 +15,7 @@ const names = [
   "لوحة التغطية", "المنهجية", "بنوك متبقية ومستبعدة", "Chrome V4 - دليل",
   "Chrome V4 - تفاصيل", "مطابقة وتوحيد", "مصادر ومراجع", "حقول مفقودة", "قرارات وتعارضات",
   "ANB Validation 2026-07-30",
+  "CC77 Source Registry", "CC77 Comparison Leads", "CC77 VAT Review",
 ];
 let rendered = 0;
 const failures = [];
